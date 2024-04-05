@@ -1,0 +1,239 @@
+/* Styles for screens(xs) */
+@media screen and (max-width: 639px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 60vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+  animation: pulse 3s infinite;
+  position: absolute;
+}
+
+.instruction-text {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 180%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(sm) */
+@media screen and (min-width: 640px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 60vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+
+.instruction-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 120%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(md) */
+@media screen and (min-width: 768px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 60vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+
+.instruction-text {
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 100%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(lg) */
+@media screen and (min-width: 1024px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 50vw;
+  height: auto;
+  animation: pulse 3s infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.instruction-text {
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 75%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(xl) */
+@media screen and (min-width: 1280px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 50vw;
+  height: auto;
+  animation: pulse 3s infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.instruction-text {
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 60%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(2xl) */
+@media screen and (min-width: 1536px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 50vw;
+  height: auto;
+  animation: pulse 3s infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.instruction-text {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 50%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(3xl) */
+@media screen and (min-width: 1920px) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 50vw;
+  height: auto;
+  animation: pulse 3s infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.instruction-text {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  opacity: .7;
+  margin-top: 45%;
+  position: absolute;
+  animation: pulse 3s infinite;
+}
+}
+  
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+  
