@@ -251,8 +251,8 @@ async function createUserStatus() {
                     $and: [
                       { $eq: ["$categoryAttempt", 1] },
                       { $lt: ["$currCorrectAnswer", 7] },
-                      //{ $gte: ["$totalTimeSpent", 240] } // Check if totalTimeSpent is greater than or equal to 240
-                    ],
+                      { $gte: ["$totalTimeSpent", 240] }
+                    ]
                   },
                   {
                     $and: [
@@ -260,17 +260,24 @@ async function createUserStatus() {
                       { $lt:  ["$currCorrectAnswer", 7] },
                       { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
                       { $gte: ["$totalTimeSpent", 240] }
-                    ],
-                  },
-                ],
+                    ]
+                  }
+                ]
               },
               then: true,
-              else: false,
-            },
+              else: {
+                $cond: {
+                  if: { $and: [{ $eq: ["$categoryAttempt", 1] }, { $gte: ["$currCorrectAnswer", 7] }] },
+                  then: false,
+                  else: true
+                }
+              }
+            }
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
-        },
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
+        }
       },
+      
       {
         $addFields: {
           averageScore: {
