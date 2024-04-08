@@ -251,31 +251,49 @@ async function createUserStatus() {
                     $and: [
                       { $eq: ["$categoryAttempt", 1] },
                       { $lt: ["$currCorrectAnswer", 7] },
-                      { $gte: ["$totalTimeSpent", 240] }
-                    ]
+                      { $gte: ["$totalTimeSpent", 240] },
+                    ],
                   },
                   {
                     $and: [
                       { $gte: ["$categoryAttempt", 2] },
-                      { $lt:  ["$currCorrectAnswer", 7] },
+                      { $lt: ["$currCorrectAnswer", 7] },
                       { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
-                      { $gte: ["$totalTimeSpent", 240] }
-                    ]
-                  }
-                ]
+                      { $gte: ["$totalTimeSpent", 240] },
+                    ],
+                  },
+                ],
               },
               then: true,
               else: {
                 $cond: {
-                  if: { $and: [{ $eq: ["$categoryAttempt", 1] }, { $gte: ["$currCorrectAnswer", 7] }] },
+                  if: {
+                    $or: [
+                      {
+                        $and: [
+                          { $eq: ["$categoryAttempt", 1] },
+                          { $lt: ["$currCorrectAnswer", 7] },
+                        ],
+                      },
+                      {
+                        $and: [
+                          { $gte: ["$categoryAttempt", 2] },
+                          { $lt: ["$currCorrectAnswer", 7] },
+                          {
+                            $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"],
+                          },
+                        ],
+                      },
+                    ],
+                  },
                   then: false,
-                  else: true
-                }
-              }
-            }
+                  else: true,
+                },
+              },
+            },
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
-        }
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
+        },
       },
       {
         $addFields: {
