@@ -416,7 +416,7 @@ async function createUserStatus() {
 }
 
 // Define a new route to handle fetching user status data
-app.get("https://sycures-api.onrender.com/user-status/:userId", async (req, res) => {
+app.get("/user-status/:userId", async (req, res) => {
   try {
     const userId = req.params.userId; // Extract userId from URL parameters
 
@@ -439,7 +439,7 @@ app.get("https://sycures-api.onrender.com/user-status/:userId", async (req, res)
   }
 });
 
-app.post("https://sycures-api.onrender.com/api/user/register", async (req, res) => {
+app.post("/api/user/register", async (req, res) => {
   const { name, age, email, password } = req.body;
   try {
     const existingUser = await User.findOne({ email });
@@ -467,7 +467,7 @@ app.post("https://sycures-api.onrender.com/api/user/register", async (req, res) 
   }
 });
 
-app.post("https://sycures-api.onrender.com/api/user/login", async (req, res) => {
+app.post("/api/user/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
@@ -486,7 +486,7 @@ app.post("https://sycures-api.onrender.com/api/user/login", async (req, res) => 
   }
 });
 
-app.post("https://sycures-api.onrender.com/api/reset-password", async (req, res) => {
+app.post("/api/reset-password", async (req, res) => {
   const { email, newPassword } = req.body;
 
   try {
@@ -507,7 +507,7 @@ app.post("https://sycures-api.onrender.com/api/reset-password", async (req, res)
   }
 });
 
-app.get("https://sycures-api.onrender.com/api/user/:userId", async (req, res) => {
+app.get("/api/user/:userId", async (req, res) => {
   const userId = req.params.userId;
 
   try {
@@ -524,7 +524,7 @@ app.get("https://sycures-api.onrender.com/api/user/:userId", async (req, res) =>
   }
 });
 
-app.post("https://sycures-api.onrender.com/api/user/updateCategories/:userId", async (req, res) => {
+app.post("/api/user/updateCategories/:userId", async (req, res) => {
   const userId = req.params.userId;
   const { category } = req.body;
   try {
@@ -615,7 +615,7 @@ function createNewAttempt() {
   };
 }
 
-app.post("https://sycures-api.onrender.com/api/user/updateCategoryScoreAndTime/:userId", async (req, res) => {
+app.post("/api/user/updateCategoryScoreAndTime/:userId", async (req, res) => {
   const userId = req.params.userId;
   const { category, score, time, questionAttempts } = req.body;
 
@@ -709,7 +709,7 @@ app.post("https://sycures-api.onrender.com/api/user/updateCategoryScoreAndTime/:
   }
 });
 
-app.get("https://sycures-api.onrender.com/api/user/:userId/winrate", async (req, res) => {
+app.get("/api/user/:userId/winrate", async (req, res) => {
   const userId = req.params.userId;
   const category = req.query.category;
 
@@ -755,7 +755,7 @@ app.get("https://sycures-api.onrender.com/api/user/:userId/winrate", async (req,
   }
 });
 
-app.get("https://sycures-api.onrender.com/api/user/:userId/categoryAttempt", async (req, res) => {
+app.get("/api/user/:userId/categoryAttempt", async (req, res) => {
   const userId = req.params.userId;
   const category = req.query.category;
 
