@@ -277,7 +277,6 @@ async function createUserStatus() {
           averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
         }
       },
-      
       {
         $addFields: {
           averageScore: {
