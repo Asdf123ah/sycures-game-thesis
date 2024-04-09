@@ -249,7 +249,7 @@ async function createUserStatus() {
                 $and: [
                   { $eq: ["$categoryAttempt", 1] },
                   { $lt: ["$currCorrectAnswer", 7] },
-                  { $gte: ["$totalTimeSpent", 240] }
+                  { $lt: ["$totalTimeSpent", 240] }
                 ]
               },
               then: true,
@@ -264,7 +264,7 @@ async function createUserStatus() {
                           { $gte: ["$categoryAttempt", 2] },
                           { $lt: ["$currCorrectAnswer", 7] },
                           { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
-                          { $gte: ["$totalTimeSpent", 240] }
+                          { $lt: ["$totalTimeSpent", 240] }
                         ]
                       },
                       then: true,
