@@ -46,7 +46,7 @@ function Badges() {
           <div className="box-statistic1">
             <div className="box-statistic1-label">
               <p>{selectedBadge.title}</p>
-              <img src={selectedBadge.image} alt={selectedBadge.alt} />
+              <img src={selectedBadge.image} alt={selectedBadge.alt} loading="eager"/>
             </div>
           </div>
           <div className="box-statistic2">

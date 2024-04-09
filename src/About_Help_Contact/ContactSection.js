@@ -16,6 +16,7 @@ function ContactSection() {
         className="sycuresLogoGameAboutHelpContact"
         src={sycuresLogo}
         alt="Sycures Logo"
+        loading="eager"
       />
       <button
         className="backButtonAboutHelpContact"
@@ -24,7 +25,7 @@ function ContactSection() {
       <div className="whiteBoxBG">
         <div className="whiteBox">
           <div className="whiteBox1">
-            <img className="contact-robot" src={contactRobot} alt="Contact Robot" />
+            <img className="contact-robot" src={contactRobot} alt="Contact Robot" loading="eager"/>
           </div>
           <div className="blueBox">
             <h1 className="title">CONTACT</h1>

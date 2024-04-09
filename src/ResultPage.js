@@ -274,6 +274,7 @@ function ResultPage() {
         className="sycuresLogoGameResultPage"
         src={sycuresLogo}
         alt="Sycures Logo"
+        loading="eager"
       />
       <div className="resultBoxResultPageBG">
         <div className="resultBoxResultPage">

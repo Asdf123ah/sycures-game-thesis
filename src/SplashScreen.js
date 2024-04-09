@@ -12,7 +12,7 @@ function SplashScreen() {
 
   return (
     <div className="splash-screen" onClick={handleStart}>
-      <img className="image-splash" src={gamePictureLogo} alt="Game Logo" />
+      <img className="image-splash" src={gamePictureLogo} alt="Game Logo" loading="eager"/>
       <p className="instruction-text">Click anywhere to continue</p>
     </div>
   );

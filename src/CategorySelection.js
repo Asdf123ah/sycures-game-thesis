@@ -62,6 +62,7 @@ function CategorySelection() {
         className="sycuresLogoGameCategorySelection"
         src={sycuresLogo}
         alt="Sycures Logo"
+        loading="eager"
       />
       <div className="boxCategorySelectionBG">
         <div className="boxCategorySelection">

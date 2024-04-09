@@ -16,6 +16,7 @@ function HelpSection() {
         className="sycuresLogoGameAboutHelpContact"
         src={sycuresLogo}
         alt="Sycures Logo"
+        loading="eager"
       />
       <button
         className="backButtonAboutHelpContact"

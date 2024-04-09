@@ -216,6 +216,7 @@ function Login() {
           alt="Sycures Logo Login"
           className="sycures-logo-login"
           onClick={() => navigate("/")}
+          loading="eager"
         />
       </div>
       <div className="lower-box">
@@ -245,6 +246,7 @@ function Login() {
           src={giantSycuresImage}
           alt="Giant Sycures"
           className="giant-sycures"
+          loading="eager"
         />
         <div className="black-box"></div>
         <div className="darkblue-box">
@@ -283,18 +285,20 @@ function Login() {
             </div>
           </div>
 
-          <img src={RobotLogin} alt="robot login" className="robot-login" />
+          <img src={RobotLogin} alt="robot login" className="robot-login" loading="eager"/>
           <div className="blinking-eye-left"></div>
           <div className="blinking-eye-right"></div>
           <img
             src={RobotLoginArm}
             alt="Robot Login Right Arm"
             className="robot-login-rightarm"
+            loading="eager"
           ></img>
           <img
             src={RobotLoginArm}
             alt="Robot Login Left Arm"
             className="robot-login-leftarm"
+            loading="eager"
           ></img>
         </div>
       </div>

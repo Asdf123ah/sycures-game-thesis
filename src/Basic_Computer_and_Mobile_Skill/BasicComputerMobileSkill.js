@@ -575,7 +575,7 @@ const BasicComputerMobileSkill = () => {
   return (
     <div className="containerGame">
       <button className="backButtonGame" onClick={handleBackButtonClick}></button>
-      <img className="sycuresLogoGame" src={sycuresLogo} alt="Sycures Logo" />
+      <img className="sycuresLogoGame" src={sycuresLogo} alt="Sycures Logo" loading="eager"/>
       <div className="boxTop"></div>
       <div className="baseHexagon hexagon0"></div>
       <div className="boxBottom"></div>
@@ -804,7 +804,7 @@ const BasicComputerMobileSkill = () => {
       <div className="hexagonQuestion">
         <div className="transparentTextBox">{nextQuestion.text}</div>
       </div>
-      <img className={`jumpingRobot ${robotPosition.moved ? 'moved' : ''}`} style={{ left: `${robotPosition.left}%`, top: `${robotPosition.top}%` }} src={JumpingRobot} alt="Jumping Robot" />
+      <img className={`jumpingRobot ${robotPosition.moved ? 'moved' : ''}`} style={{ left: `${robotPosition.left}%`, top: `${robotPosition.top}%` }} src={JumpingRobot} alt="Jumping Robot" loading="eager"/>
       {showBackModal && (
         <BackModal
           onProceed={handleProceedToCategorySelection}
