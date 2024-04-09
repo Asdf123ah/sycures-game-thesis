@@ -246,55 +246,39 @@ async function createUserStatus() {
           isWheelSpinning: {
             $cond: {
               if: {
-                $or: [
-                  {
-                    $and: [
-                      { $eq: ["$categoryAttempt", 1] },
-                      { $lt: ["$currCorrectAnswer", 7] },
-                      { $gte: ["$totalTimeSpent", 240] },
-                    ],
-                  },
-                  {
-                    $and: [
-                      { $gte: ["$categoryAttempt", 2] },
-                      { $lt: ["$currCorrectAnswer", 7] },
-                      { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
-                      { $gte: ["$totalTimeSpent", 240] },
-                    ],
-                  },
-                ],
+                $and: [
+                  { $eq: ["$categoryAttempt", 1] },
+                  { $lt: ["$currCorrectAnswer", 7] },
+                  { $gte: ["$totalTimeSpent", 240] }
+                ]
               },
               then: true,
               else: {
                 $cond: {
-                  if: {
-                    $or: [
-                      {
-                        $and: [
-                          { $eq: ["$categoryAttempt", 1] },
-                          { $lt: ["$currCorrectAnswer", 7] },
-                        ],
-                      },
-                      {
+                  if: { $gte: ["$currCorrectAnswer", 7] },
+                  then: false,
+                  else: {
+                    $cond: {
+                      if: {
                         $and: [
                           { $gte: ["$categoryAttempt", 2] },
                           { $lt: ["$currCorrectAnswer", 7] },
-                          {
-                            $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"],
-                          },
-                        ],
+                          { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
+                          { $gte: ["$totalTimeSpent", 240] }
+                        ]
                       },
-                    ],
-                  },
-                  then: false,
-                  else: true,
-                },
-              },
-            },
+                      then: true,
+                      else: false
+                    }
+                  }
+                }
+              }
+            }
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
-        },
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
+        }
       },
+      
       {
         $addFields: {
           averageScore: {
