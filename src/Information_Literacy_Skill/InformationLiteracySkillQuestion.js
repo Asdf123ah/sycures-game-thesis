@@ -87,7 +87,7 @@ const questions = [
       correctChoice: 2 },
     { id: 5, 
       text: getRandomText5(),
-      choices: ["Website with the most visually appealing design.", "Cross-reference information from both websites with reliable sources.", "Avoid bias; select based on preconceived beliefs."], 
+      choices: ["Website with the most visually appealing design.", "Cross-reference information from both websites with reliable sources.", "Avoid bias select based on preconceived beliefs."], 
       correctChoice: 1 },
     { id: 6, 
       text: getRandomText6(),
