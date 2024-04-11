@@ -1,7 +1,7 @@
 /* Styles for screens(xs) */
 @media screen and (max-width: 639px) {
 .containerCategorySelection {
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -23,7 +23,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100vw;
   height: 55%;
   margin-top: 17%;
@@ -35,7 +35,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 50px;
   width: 90vw;
   height: 65vh;
@@ -58,7 +58,7 @@
   left: 2%;
   width: 12dvw;
   height: 5dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -103,7 +103,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 18%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -142,7 +142,7 @@
 /* Styles for screens(sm) */
 @media screen and (min-width: 640px) {
 .containerCategorySelection { 
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -164,7 +164,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -176,7 +176,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 50px;
   width: 90dvw;
   height: 65dvh;
@@ -198,7 +198,7 @@
   left: 2%;
   width: 12dvw;
   height: 8vh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -243,7 +243,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 18%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -283,7 +283,7 @@
 /* Styles for screens(md) */
 @media screen and (min-width: 768px) {
 .containerCategorySelection { 
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -305,7 +305,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -317,7 +317,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 50px;
   width: 90dvw;
   height: 65dvh;
@@ -339,7 +339,7 @@
   left: 2%;
   width: 10dvw;
   height: 8dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -384,7 +384,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 11%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 1.9rem;
   font-weight: bold;
@@ -423,7 +423,7 @@
 /* Styles for screens(lg) */
 @media screen and (min-width: 1024px) {
 .containerCategorySelection { 
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -445,7 +445,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -457,7 +457,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 50px;
   width: 90dvw;
   height: 65dvh;
@@ -479,7 +479,7 @@
   left: 2%;
   width: 9dvw;
   height: 9dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -524,7 +524,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 7%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 2.1rem;
   font-weight: bold;
@@ -563,7 +563,7 @@
 /* Styles for screens(xl) */
 @media screen and (min-width: 1280px) {
 .containerCategorySelection { 
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -585,7 +585,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -597,7 +597,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 50px;
   width: 90dvw;
   height: 65dvh;
@@ -619,7 +619,7 @@
   left: 1%;
   width: 7dvw;
   height: 9dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -664,7 +664,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 5%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 2.3rem;
   font-weight: bold;
@@ -702,7 +702,7 @@
 /* Styles for screens(2xl) */
 @media screen and (min-width: 1536px) {
 .containerCategorySelection {
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -723,7 +723,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -734,7 +734,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 30px;
   width: 70dvw;
   height: 65dvh;
@@ -755,7 +755,7 @@
   left: 1%;
   width: 6dvw;
   height: 9dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -799,7 +799,7 @@
   height: auto;
   padding: .3em;
   margin-bottom: 3%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -838,7 +838,7 @@
 /* Styles for screens(3xl) */
 @media screen and (min-width: 1920px) {
 .containerCategorySelection {
-  background-color: #84BCC8;
+  background-color: #FFFFFF;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -859,7 +859,7 @@
 
 .boxCategorySelectionBG {
   position: relative;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #1B7A8F;
   width: 100dvw;
   height: 55dvh;
   margin-top: 17%;
@@ -870,7 +870,7 @@
 
 .boxCategorySelection {
   position: relative;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #B1D4DC;
   border-radius: 30px;
   width: 70dvw;
   height: 65dvh;
@@ -891,7 +891,7 @@
   left: 1%;
   width: 5dvw;
   height: 9dvh;
-  background: url('./Photos/BackButtonImage.jpg');
+  background: url('./Photos/BackButtonImage2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -935,7 +935,7 @@
   height: auto;
   padding: .1em;
   margin-bottom: 2%;
-  background-color: #D9D9D9 ;
+  background-color: #B1D4DC ;
   text-align: center;
   font-size: 2.8rem;
   font-weight: bold;

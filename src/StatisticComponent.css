@@ -458,6 +458,11 @@
     margin: auto;
     margin-top: 2%;
 }
+
+activeStat
+{
+
+}
 }
 
 /* Styles for screens(sm) */
@@ -919,6 +924,11 @@
     font-weight: bold;
     margin: auto;
     margin-top: 1%;
+}
+
+activeStat
+{
+
 }
 }
 
@@ -1382,6 +1392,11 @@
     margin: auto;
     margin-top: 1%;
 }
+
+activeStat
+{
+
+}
 }
 
 /* Styles for screens(lg) */
@@ -1842,6 +1857,11 @@
     font-weight: bold;
     margin: auto;
     margin-top: 1%;
+}
+
+activeStat
+{
+
 }
 }
 
@@ -2305,6 +2325,11 @@
     margin: auto;
     margin-top: 1%;
 }
+
+activeStat
+{
+
+}
 }
 
 /* Styles for screens(2xl) */
@@ -2759,7 +2784,12 @@
     font-weight: bold;
     margin: auto;
     margin-top: 2%;
-}    
+}
+
+activeStat
+{
+
+}
 }
 
 /* Styles for screens(3xl) */
@@ -3214,5 +3244,10 @@
     font-weight: bold;
     margin: auto;
     margin-top: 2%;
-}    
+}
+
+activeStat
+{
+
+}
 }

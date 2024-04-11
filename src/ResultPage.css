@@ -1,7 +1,7 @@
 /* Styles for screens(xs) */
 @media screen and (max-width: 639px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -23,7 +23,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -35,7 +35,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -136,7 +136,7 @@
     left: 2%;
     width: 14vw;
     height: 6vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -152,7 +152,7 @@
 /* Styles for screens(sm) */
 @media screen and (min-width: 640px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -174,7 +174,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -186,7 +186,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -290,7 +290,7 @@
     left: 2%;
     width: 12vw;
     height: 8vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -306,7 +306,7 @@
 /* Styles for screens(md) */
 @media screen and (min-width: 768px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -328,7 +328,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -340,7 +340,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -441,7 +441,7 @@
     left: 2%;
     width: 11vw;
     height: 9vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -457,7 +457,7 @@
 /* Styles for screens(lg) */
 @media screen and (min-width: 1024px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -479,7 +479,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -491,7 +491,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -592,7 +592,7 @@
     left: 2%;
     width: 9vw;
     height: 9vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -608,7 +608,7 @@
 /* Styles for screens(xl) */
 @media screen and (min-width: 1280px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -630,7 +630,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -642,7 +642,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -743,7 +743,7 @@
     left: 1%;
     width: 7vw;
     height: 9vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -759,7 +759,7 @@
 /* Styles for screens(2xl) */
 @media screen and (min-width: 1536px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -781,7 +781,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -793,7 +793,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -892,7 +892,7 @@
     left: 1%;
     width: 6vw;
     height: 9vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -908,7 +908,7 @@
 /* Styles for screens(3xl) */
 @media screen and (min-width: 1920px) {
 .containerResultPage {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -930,7 +930,7 @@
 
 .resultBoxResultPageBG {
     position: relative;
-    background-color: #FFFFFF ;
+    background-color: #1B7A8F ;
     width: 100%;
     height: 55%;
     margin-top: 17%;
@@ -942,7 +942,7 @@
 
 .resultBoxResultPage {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -1041,7 +1041,7 @@
     left: 1%;
     width: 5vw;
     height: 9vh;
-    background: url("./Photos/BackButtonImage.jpg");
+    background: url("./Photos/BackButtonImage2.jpg");
     background-size: cover;
     cursor: pointer;
     border: none;

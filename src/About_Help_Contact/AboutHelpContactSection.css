@@ -1,7 +1,7 @@
 /* Styles for screens(xs) */
 @media screen and (max-width: 639px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -27,7 +27,7 @@
     left: 2%;
     width: 14vw;
     height: 6vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -42,7 +42,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 50vh;
     margin-top: 17%;
@@ -54,7 +54,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 60vh;
@@ -66,7 +66,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 60vh;
@@ -170,7 +170,7 @@
 /* Styles for screens(sm) */
 @media screen and (min-width: 640px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -196,7 +196,7 @@
     left: 2%;
     width: 13vw;
     height: 9vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -211,7 +211,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 50vh;
     margin-top: 17%;
@@ -223,7 +223,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 60vh;
@@ -235,7 +235,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 60vh;
@@ -339,7 +339,7 @@
 /* Styles for screens(md) */
 @media screen and (min-width: 768px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -365,7 +365,7 @@
     left: 2%;
     width: 11vw;
     height: 9vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -380,7 +380,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 50vh;
     margin-top: 17%;
@@ -392,7 +392,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 60vh;
@@ -404,7 +404,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 60vh;
@@ -508,7 +508,7 @@
 /* Styles for screens(lg) */
 @media screen and (min-width: 1024px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -534,7 +534,7 @@
     left: 2%;
     width: 9vw;
     height: 9vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -549,7 +549,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 50vh;
     margin-top: 17%;
@@ -561,7 +561,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 60vh;
@@ -573,7 +573,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 60vh;
@@ -677,7 +677,7 @@
 /* Styles for screens(xl) */
 @media screen and (min-width: 1280px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -703,7 +703,7 @@
     left: 1%;
     width: 8vw;
     height: 10vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -718,7 +718,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 50vh;
     margin-top: 17%;
@@ -730,7 +730,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 60vh;
@@ -742,7 +742,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 60vh;
@@ -846,7 +846,7 @@
 /* Styles for screens(2xl) */
 @media screen and (min-width: 1536px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -872,7 +872,7 @@
     left: 1%;
     width: 7vw;
     height: 11vh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -887,7 +887,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 55vh;
     margin-top: 17%;
@@ -899,7 +899,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 63vh;
@@ -912,7 +912,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 65vh;
@@ -1016,7 +1016,7 @@
 /* Styles for screens(3xl) */
 @media screen and (min-width: 1920px) {
 .containerAboutHelpContact {
-    background-color: #84BCC8;
+    background-color: #FFFFFF;
     width: 100dvw;
     height: 100dvh;
     display: flex;
@@ -1042,7 +1042,7 @@
     left: 1%;
     width: 6dvw;
     height: 10dvh;
-    background: url('../Photos/BackButtonImage.jpg');
+    background: url('../Photos/BackButtonImage2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -1057,7 +1057,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: #1B7A8F;
     width: 100vw;
     height: 55vh;
     margin-top: 17%;
@@ -1069,7 +1069,7 @@
 
 .whiteBox {
     position: relative;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px;
     width: 70vw;
     height: 63vh;
@@ -1082,7 +1082,7 @@
 
 .whiteBox1 {
     position: absolute;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #B1D4DC;
     border-radius: 50px 0px 0px 50px;
     width: 35vw;
     height: 65vh;

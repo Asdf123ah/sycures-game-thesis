@@ -82,12 +82,12 @@ function Login() {
           </button>
         </form>
         <div className="forgot-password">
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <Link to="/forgot-password" style={{ color: '#FFFFFF' }}>Forgot Password?</Link>
         </div>
         <p className="p-login">
           Don't have an account?{" "}
           <u>
-            <b className="b-register" onClick={onRegisterClick}>
+            <b className="b-register" onClick={onRegisterClick} style={{ color: '#2CCCD7' }}>
               Register
             </b>
           </u>

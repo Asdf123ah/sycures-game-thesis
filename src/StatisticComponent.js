@@ -342,25 +342,25 @@ function StatisticComponent() {
         <div className="blueBoxStat">
           <div className="blueBoxStatdiv">
             <p
-              className={activeTab === "basic" ? "active" : ""}
+              className={activeTab === "basic" ? "activeStat" : ""}
               onClick={() => handleTabClick("basic")}
             >
               Basic Computer and Mobile Skill
             </p>
             <p
-              className={activeTab === "internet" ? "active" : ""}
+              className={activeTab === "internet" ? "activeStat" : ""}
               onClick={() => handleTabClick("internet")}
             >
               Internet Skill
             </p>
             <p
-              className={activeTab === "communication" ? "active" : ""}
+              className={activeTab === "communication" ? "activeStat" : ""}
               onClick={() => handleTabClick("communication")}
             >
               Communication Skill
             </p>
             <p
-              className={activeTab === "information" ? "active" : ""}
+              className={activeTab === "information" ? "activeStat" : ""}
               onClick={() => handleTabClick("information")}
             >
               Information Literacy Skill
