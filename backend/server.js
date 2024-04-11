@@ -208,6 +208,31 @@ async function createUserStatus() {
               "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.question10Time",
             ],
           },
+          consecutiveWrongAnswers: {
+            $reduce: {
+              input: {
+                $map: {
+                  input: "$categories.categoryAttemptDetail.questionAttempts",
+                  as: "attempt",
+                  in: {
+                    $cond: [
+                      { $not: "$$attempt.isCorrect" }, // Check if attempt is wrong
+                      1,
+                      0,
+                    ],
+                  },
+                },
+              },
+              initialValue: 0,
+              in: {
+                $cond: [
+                  { $eq: ["$$this", 1] }, // Check if current attempt is wrong
+                  { $add: ["$$value", 1] }, // Increment consecutive wrong answers counter
+                  0,
+                ],
+              },
+            },
+          },
         },
       },
       {
@@ -223,6 +248,7 @@ async function createUserStatus() {
           prevAttemptsCorrect: { $push: "$currCorrectAnswer" },
           categoryAttempt: { $first: "$categories.categoryAttempt" },
           totalTimeSpent: { $first: "$totalTimeSpent" },
+          consecutiveWrongAnswers: { $first: "$consecutiveWrongAnswers" },
         },
       },
       {
@@ -249,7 +275,7 @@ async function createUserStatus() {
                 $and: [
                   { $eq: ["$categoryAttempt", 1] },
                   { $lt: ["$currCorrectAnswer", 7] },
-                ]
+                ],
               },
               then: true,
               else: {
@@ -262,21 +288,23 @@ async function createUserStatus() {
                         $and: [
                           { $gte: ["$categoryAttempt", 2] },
                           { $lt: ["$currCorrectAnswer", 7] },
-                          { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
-                        ]
+                          {
+                            $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"],
+                          },
+                        ],
                       },
                       then: true,
-                      else: false
-                    }
-                  }
-                }
-              }
-            }
+                      else: false,
+                    },
+                  },
+                },
+              },
+            },
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
-        }
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
+        },
       },
-      
+
       {
         $addFields: {
           averageScore: {
@@ -302,6 +330,7 @@ async function createUserStatus() {
               isWheelSpinning: "$isWheelSpinning",
               averageScore: "$averageScore",
               averageTime: "$averageTime",
+              consecutiveWrongAnswers: "$consecutiveWrongAnswers",
             },
           },
         },
@@ -342,7 +371,12 @@ async function createUserStatus() {
                       "Basic Computer and Mobile Skill",
                     ],
                   },
-                  then: "$categories",
+                  then: {
+                    $mergeObjects: [
+                      "$categories",
+                      { consecutiveWrongAnswers: "$consecutiveWrongAnswers" }, // Include consecutiveWrongAnswers field
+                    ],
+                  },
                 },
                 {
                   case: { $eq: ["$categories.categoryName", "Internet Skill"] },
