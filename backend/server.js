@@ -120,76 +120,16 @@ async function createUserStatus() {
         $addFields: {
           currCorrectAnswer: {
             $sum: [
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10",
-                  1,
-                  0,
-                ],
-              },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10", 1, 0, ], },
             ],
           },
           totalAttempts: "$categories.categoryAttempt",
@@ -208,31 +148,6 @@ async function createUserStatus() {
               "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.question10Time",
             ],
           },
-          consecutiveWrongAnswers: {
-            $reduce: {
-              input: {
-                $map: {
-                  input: "$categories.categoryAttemptDetail.questionAttempts",
-                  as: "attempt",
-                  in: {
-                    $cond: [
-                      { $not: "$$attempt.isCorrect" }, // Check if attempt is wrong
-                      1,
-                      0,
-                    ],
-                  },
-                },
-              },
-              initialValue: 0,
-              in: {
-                $cond: [
-                  { $eq: ["$$this", 1] }, // Check if current attempt is wrong
-                  { $add: ["$$value", 1] }, // Increment consecutive wrong answers counter
-                  0,
-                ],
-              },
-            },
-          },
         },
       },
       {
@@ -248,7 +163,6 @@ async function createUserStatus() {
           prevAttemptsCorrect: { $push: "$currCorrectAnswer" },
           categoryAttempt: { $first: "$categories.categoryAttempt" },
           totalTimeSpent: { $first: "$totalTimeSpent" },
-          consecutiveWrongAnswers: { $first: "$consecutiveWrongAnswers" },
         },
       },
       {
@@ -330,7 +244,6 @@ async function createUserStatus() {
               isWheelSpinning: "$isWheelSpinning",
               averageScore: "$averageScore",
               averageTime: "$averageTime",
-              consecutiveWrongAnswers: "$consecutiveWrongAnswers",
             },
           },
         },
@@ -371,12 +284,7 @@ async function createUserStatus() {
                       "Basic Computer and Mobile Skill",
                     ],
                   },
-                  then: {
-                    $mergeObjects: [
-                      "$categories",
-                      { consecutiveWrongAnswers: "$consecutiveWrongAnswers" }, // Include consecutiveWrongAnswers field
-                    ],
-                  },
+                  then: "$categories",
                 },
                 {
                   case: { $eq: ["$categories.categoryName", "Internet Skill"] },
