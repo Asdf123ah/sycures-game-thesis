@@ -7,6 +7,7 @@ import giantSycuresImage from "./Photos/giantSycures.png";
 import SycuresLogoLogin from "./Photos/SycuresLogoLogin.png";
 import RobotLogin from "./Photos/robotLogin.png";
 import RobotLoginArm from "./Photos/robotLoginArm.png";
+import SyGIF from "./Photos/sy.gif";
 
 function Login() {
   const navigate = useNavigate();
@@ -82,12 +83,18 @@ function Login() {
           </button>
         </form>
         <div className="forgot-password">
-          <Link to="/forgot-password" style={{ color: '#FFFFFF' }}>Forgot Password?</Link>
+          <Link to="/forgot-password" style={{ color: "#FFFFFF" }}>
+            Forgot Password?
+          </Link>
         </div>
         <p className="p-login">
           Don't have an account?{" "}
           <u>
-            <b className="b-register" onClick={onRegisterClick} style={{ color: '#2CCCD7' }}>
+            <b
+              className="b-register"
+              onClick={onRegisterClick}
+              style={{ color: "#2CCCD7" }}
+            >
               Register
             </b>
           </u>
@@ -284,22 +291,9 @@ function Login() {
               </div>
             </div>
           </div>
-
-          <img src={RobotLogin} alt="robot login" className="robot-login" loading="eager"/>
-          <div className="blinking-eye-left"></div>
-          <div className="blinking-eye-right"></div>
-          <img
-            src={RobotLoginArm}
-            alt="Robot Login Right Arm"
-            className="robot-login-rightarm"
-            loading="eager"
-          ></img>
-          <img
-            src={RobotLoginArm}
-            alt="Robot Login Left Arm"
-            className="robot-login-leftarm"
-            loading="eager"
-          ></img>
+          <div>
+            <img  className="robot-login" src={SyGIF} alt="sy.gif" />
+          </div>
         </div>
       </div>
       {showModalRegister && (

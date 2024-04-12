@@ -2435,13 +2435,12 @@
 
 .robot-login {
     position: absolute;
-    width: 35vw;
+    width: 75dvw;
     height: auto;
-    top: 74%;
-    left: -82%;
+    top: 55%;
+    left: -122%;
     z-index: 6;
     display: block;
-
 }
 
 .blinking-eye-left {
@@ -2952,10 +2951,10 @@
 
 .robot-login {
     position: absolute;
-    width: 28vw;
+    width: 62dvw;
     height: auto;
-    top: 74%;
-    left: -75%;
+    top: 50%;
+    left: -108%;
     z-index: 6;
 }
 
@@ -3459,10 +3458,10 @@
 
 .robot-login {
     position: absolute;
-    width: 28vw;
+    width: 62dvw;
     height: auto;
-    top: 67%;
-    left: -75%;
+    top: 47%;
+    left: -108%;
     z-index: 6;
 }
 
