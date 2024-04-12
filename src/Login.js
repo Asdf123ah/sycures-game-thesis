@@ -5,8 +5,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import giantSycuresImage from "./Photos/giantSycures.png";
 import SycuresLogoLogin from "./Photos/SycuresLogoLogin.png";
-import RobotLogin from "./Photos/robotLogin.png";
-import RobotLoginArm from "./Photos/robotLoginArm.png";
 import SyGIF from "./Photos/sy.gif";
 
 function Login() {
@@ -292,7 +290,7 @@ function Login() {
             </div>
           </div>
           <div>
-            <img  className="robot-login" src={SyGIF} alt="sy.gif" />
+            <img className="robot-login" src={SyGIF} alt="sy.gif" />
           </div>
         </div>
       </div>
