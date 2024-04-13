@@ -182,6 +182,7 @@ function Login() {
               >
                 <option value="">Select course</option>
                 <option value="BSCS">BSCS</option>
+                <option value="BSIt">BSIT</option>
                 <option value="TVL">TVL</option>
                 <option value="Others">Others</option>
               </select>
