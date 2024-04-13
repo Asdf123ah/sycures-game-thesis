@@ -25,7 +25,7 @@ connection.once("open", () => {
 const userSchema = new mongoose.Schema({
   name: String,
   age: Number,
-  course: Number,
+  course: String,
   email: String,
   password: String,
   categories: [
@@ -423,6 +423,7 @@ app.post("/api/user/login", async (req, res) => {
       _id: user._id,
       name: user.name,
       age: user.age,
+      course: user.course,
       email: user.email,
     });
   } catch (error) {
