@@ -745,6 +745,23 @@ app.get("/api/admin/users", async (req, res) => {
   }
 });
 
+// Define a new route to handle fetching all user status data
+app.get("api/admin/user-status", async (req, res) => {
+  try {
+    // Query the userStatus collection to retrieve all documents
+    const userStatusData = await connection.db.collection("userStatus").find({})
+
+    // Log the retrieved data
+    console.log(userStatusData);
+
+    // Send the retrieved data as the response
+    res.json(userStatusData);
+  } catch (error) {
+    console.error("Error fetching all user status data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
