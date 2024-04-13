@@ -15,6 +15,7 @@ import Practice from "./practiice";
 import NotFoundComponent from "./NotFoundComponent";
 import StatisticComponent from "./StatisticComponent";
 import ForgotPassword from "./ForgotPassword";
+import AdminPage from "./AdminPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           path="/category-selection/:userId"
           element={<CategorySelection />}
         />
+        <Route path="/admin-page" element={<AdminPage />} />{" "}
         <Route
           path="/information-literacy-skill/:userId/"
           element={<InformationLiteracySkill />}
