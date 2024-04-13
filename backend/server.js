@@ -26,6 +26,7 @@ const userSchema = new mongoose.Schema({
   name: String,
   age: Number,
   course: String,
+  position: String,
   email: String,
   password: String,
   categories: [
@@ -394,6 +395,7 @@ app.post("/api/user/register", async (req, res) => {
       name,
       age,
       course,
+      position: "student",
       email,
       password: hashedPassword,
       categories: [],
@@ -403,6 +405,7 @@ app.post("/api/user/register", async (req, res) => {
       _id: savedUser._id,
       name: savedUser.name,
       course: savedUser.course,
+      position: savedUser.position,
       age: savedUser.age,
       email: savedUser.email,
     });
@@ -424,6 +427,7 @@ app.post("/api/user/login", async (req, res) => {
       name: user.name,
       age: user.age,
       course: user.course,
+      position: user.position,
       email: user.email,
     });
   } catch (error) {
