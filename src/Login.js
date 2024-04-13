@@ -106,10 +106,11 @@ function Login() {
     const [birthDate, setBirthDate] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [course, setCourse] = useState("");
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      if (!name || !birthDate || !email || !password) {
+      if (!name || !birthDate || !email || !password || !course) {
         setShowModalInvalid(true);
         return;
       }
@@ -122,6 +123,7 @@ function Login() {
             age: age,
             email: email,
             password: password,
+            course: course,
           }
         );
 
@@ -167,6 +169,23 @@ function Login() {
                 className="input-style-age"
                 required
               />
+            </div>
+            <div>
+              <label htmlFor="course" className="label-course">
+                Course/Strand:
+              </label>
+              <select
+                id="course"
+                value={course}
+                onChange={(e) => setCourse(e.target.value)}
+                className="input-style-course"
+                required
+              >
+                <option value="">Select course</option>
+                <option value="BSCS">BSCS</option>
+                <option value="TVL">TVL</option>
+                <option value="Others">Others</option>
+              </select>
             </div>
             <div>
               <label htmlFor="email" className="label-regEmail">

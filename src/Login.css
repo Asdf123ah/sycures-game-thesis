@@ -218,46 +218,55 @@
 }
 
 .label-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 31%; 
-    margin-left: 4%;
+    margin-top: 24%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 60%; 
-    margin-left: 4%;
+    margin-top: 50%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 75%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 90%; 
-    margin-left: 4%;
+    margin-top: 100%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 120%; 
-    margin-left: 4%;
+    margin-top: 125%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     padding: 8px;
     width: 85%;
-    margin-top: 40%;
+    margin-top: 32%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -268,10 +277,24 @@
 }
 
 .input-style-age {
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     padding: 8px;
     width: 85%;
-    margin-top: 70%;
+    margin-top: 58%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 1.4rem; 
+    padding: 8px;
+    width: 91%;
+    margin-top: 83%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -282,10 +305,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     padding: 8px;
     width: 85%;
-    margin-top: 100%;
+    margin-top: 108%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -296,10 +319,10 @@
 }
 
 .input-style-regPass {
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     padding: 8px;
     width: 85%;
-    margin-top: 130%;
+    margin-top: 133%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -743,46 +766,56 @@
 }
 
 .label-name {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 21%; 
-    margin-left: 6%;
+    margin-top: 17%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 45%; 
-    margin-left: 6%;
+    margin-top: 37%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 57%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 69%; 
-    margin-left: 6%;
+    margin-top: 78%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 93%; 
-    margin-left: 6%;
+    margin-top: 99%; 
+    margin-left: 5%;
     position: absolute;
 }
 
+
 .input-style-name {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 30%;
+    width: 88%;
+    margin-top: 24%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -793,10 +826,25 @@
 }
 
 .input-style-age {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 54%;
+    width: 88%;
+    margin-top: 44%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+
+.input-style-course {
+    font-size: 2rem; 
+    padding: 8px;
+    width: 91%;
+    margin-top: 65%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -807,10 +855,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 78%;
+    width: 88%;
+    margin-top: 86%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -821,10 +869,10 @@
 }
 
 .input-style-regPass {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 102%;
+    width: 88%;
+    margin-top: 107%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -838,7 +886,7 @@
     font-size: 2.8rem;
     padding: 6px;
     width: 50%;
-    margin-top: 126%;
+    margin-top: 129%;
     left: 25%;
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1268,46 +1316,55 @@
 }
 
 .label-name {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 19%; 
-    margin-left: 6%;
+    margin-top: 12%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 39%; 
-    margin-left: 6%;
+    margin-top: 29%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 46%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 59%; 
-    margin-left: 6%;
+    margin-top: 62%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 78%; 
-    margin-left: 6%;
+    margin-left: 5%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 26%;
+    width: 88%;
+    margin-top: 18%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1318,10 +1375,24 @@
 }
 
 .input-style-age {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 46%;
+    width: 88%;
+    margin-top: 35%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 2rem; 
+    padding: 8px;
+    width: 91%;
+    margin-top: 52%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1332,10 +1403,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 66%;
+    width: 88%;
+    margin-top: 68%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1346,9 +1417,9 @@
 }
 
 .input-style-regPass {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
+    width: 88%;
     margin-top: 85%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -1363,7 +1434,7 @@
     font-size: 2.8rem;
     padding: 8px;
     width: 50%;
-    margin-top: 105%;
+    margin-top: 107%;
     left: 25%;
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1390,60 +1461,6 @@
     top: 74%;
     left: -82%;
     z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-left {
-    top: 79%;
-    left: -57%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}   
-
-.robot-login-rightarm {
-    top: 80%;
-    left: -86%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-    display: none;
-
-}
-
-.robot-login-leftarm {
-    top: 68%;
-    left: -87%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
     display: none;
 
 }
@@ -1477,7 +1494,6 @@
     position: relative;
     margin-bottom: 0%;
 }
-
 
 .form-container{
     margin-top: 0%;
@@ -1621,9 +1637,9 @@
 .darkblue-box {
     background-color: #1F144B;
     width: 75%;
-    height: 80%;
+    height: 82%;
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -1793,46 +1809,55 @@
 }
 
 .label-name {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 11%; 
-    margin-left: 6%;
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 27%; 
-    margin-left: 6%;
+    margin-top: 24%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 37%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 43%; 
-    margin-left: 6%;
+    margin-top: 50%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 59%; 
-    margin-left: 6%;
+    margin-top: 63%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 17%;
+    width: 88%;
+    margin-top: 16%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1843,10 +1868,24 @@
 }
 
 .input-style-age {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 33%;
+    width: 88%;
+    margin-top: 29%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 42%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1857,10 +1896,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 49%;
+    width: 88%;
+    margin-top: 55%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1871,10 +1910,10 @@
 }
 
 .input-style-regPass {
-    font-size: 2.3rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 65%;
+    width: 88%;
+    margin-top: 68%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1888,7 +1927,7 @@
     font-size: 3rem;
     padding: 8px;
     width: 50%;
-    margin-top: 78%;
+    margin-top: 81%;
     left: 25%;
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -1915,60 +1954,6 @@
     top: 74%;
     left: -82%;
     z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-left {
-    top: 79%;
-    left: -57%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}   
-
-.robot-login-rightarm {
-    top: 80%;
-    left: -86%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-    display: none;
-
-}
-
-.robot-login-leftarm {
-    top: 68%;
-    left: -87%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
     display: none;
 
 }
@@ -2002,7 +1987,6 @@
     position: relative;
     margin-bottom: 0%;
 }
-
 
 .form-container{
     margin-top: 0%;
@@ -2147,9 +2131,9 @@
 .darkblue-box {
     background-color: #1F144B;
     width: 51%;
-    height: 80%;
+    height: 84%;
     position: absolute;
-    top: 40%;
+    top: 42%;
     left: 73%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -2319,46 +2303,55 @@
 }
 
 .label-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 13%; 
-    margin-left: 6%;
+    margin-top: 12%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 31%; 
-    margin-left: 6%;
+    margin-top: 28%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 44%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 49%; 
-    margin-left: 6%;
+    margin-top: 60%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 67%; 
-    margin-left: 6%;
+    margin-top: 76%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.5rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 20%;
+    width: 88%;
+    margin-top: 18%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2369,10 +2362,24 @@
 }
 
 .input-style-age {
-    font-size: 2.5rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 38%;
+    width: 88%;
+    margin-top: 34%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 2.2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 50%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2383,10 +2390,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.5rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 56%;
+    width: 88%;
+    margin-top: 66%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2397,10 +2404,10 @@
 }
 
 .input-style-regPass {
-    font-size: 2.5rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 74%;
+    width: 88%;
+    margin-top: 82%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2414,7 +2421,7 @@
     font-size: 3.5rem;
     padding: 8px;
     width: 50%;
-    margin-top: 95%;
+    margin-top: 98%;
     left: 25%;
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -2669,9 +2676,9 @@
 .darkblue-box {
     background-color: #1F144B;
     width: 51%;
-    height: 80%;
+    height: 83%;
     position: absolute;
-    top: 40%;
+    top: 41%;
     left: 73%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -2835,46 +2842,55 @@
 }
 
 .label-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 12%; 
-    margin-left: 6%;
+    margin-top: 11%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 27%; 
-    margin-left: 6%;
+    margin-top: 24%; 
+    margin-left: 5%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 37%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 42%; 
-    margin-left: 6%;
+    margin-top: 50%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 57%; 
-    margin-left: 6%;
+    margin-top: 63%; 
+    margin-left: 5%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.6rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 17%;
+    width: 88%;
+    margin-top: 16%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2885,10 +2901,24 @@
 }
 
 .input-style-age {
-    font-size: 2.6rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 32%;
+    width: 88%;
+    margin-top: 29%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 2.2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 42%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2899,10 +2929,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.6rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 47%;
+    width: 88%;
+    margin-top: 55%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2913,10 +2943,10 @@
 }
 
 .input-style-regPass {
-    font-size: 2.6rem; 
+    font-size: 2.2rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 62%;
+    width: 88%;
+    margin-top: 68%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2930,7 +2960,7 @@
     font-size: 3.5rem;
     padding: 10px;
     width: 50%;
-    margin-top: 79%;
+    margin-top: 81%;
     left: 25%;
     font-family: 'Inter', sans-serif;
     text-align: center;
@@ -2956,52 +2986,6 @@
     top: 50%;
     left: -108%;
     z-index: 6;
-}
-
-.blinking-eye-left {
-    top: 79%;
-    left: -55%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-}   
-
-.robot-login-rightarm {
-    top: 78%;
-    left: -80%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-}
-
-.robot-login-leftarm {
-    top: 66%;
-    left: -80%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
 }
 
 .login-register-container {
@@ -3130,7 +3114,7 @@
 }
     
 /* Styles for screens(3xl) */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1800px) {
 .containerLogin {
     width: 100vw;
     height: 100vh;
@@ -3342,46 +3326,55 @@
 }
 
 .label-name {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 12%; 
+    margin-top: 10%; 
     margin-left: 9%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 25%; 
+    margin-top: 21%; 
+    margin-left: 9%;
+    position: absolute;
+}
+
+.label-course {
+    font-size: 2.4rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 32%; 
     margin-left: 9%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 38%; 
+    margin-top: 43%; 
     margin-left: 9%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 51%; 
+    margin-top: 54%; 
     margin-left: 9%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.6rem; 
+    font-size: 2.4rem; 
     padding: 8px;
     width: 80%;
-    margin-top: 17%;
+    margin-top: 14%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -3392,10 +3385,24 @@
 }
 
 .input-style-age {
-    font-size: 2.6rem; 
+    font-size: 2.4rem; 
     padding: 8px;
     width: 80%;
-    margin-top: 30%;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+}
+
+.input-style-course {
+    font-size: 2.4rem; 
+    padding: 8px;
+    width: 82%;
+    margin-top: 36%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -3406,10 +3413,10 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.6rem; 
+    font-size: 2.4rem; 
     padding: 8px;
     width: 80%;
-    margin-top: 43%;
+    margin-top: 47%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -3420,10 +3427,10 @@
 }
 
 .input-style-regPass {
-    font-size: 2.6rem; 
+    font-size: 2.4rem; 
     padding: 8px;
     width: 80%;
-    margin-top: 56%;
+    margin-top: 58%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -3463,52 +3470,6 @@
     top: 47%;
     left: -108%;
     z-index: 6;
-}
-
-.blinking-eye-left {
-    top: 73.5%;
-    left: -55%;
-    width: 65px;
-    height: 65px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-}
-
-.blinking-eye-right {
-    top: 74%;
-    left: -46%;
-    width: 57px;
-    height: 57px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-}   
-
-.robot-login-rightarm {
-    top: 78%;
-    left: -72%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-}
-
-.robot-login-leftarm {
-    top: 67%;
-    left: -76%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
 }
 
 .login-register-container {
@@ -3634,277 +3595,6 @@
     opacity: 0;
     transition: opacity .8s ease-out;
 }
-}
-
-@keyframes blinklogin {
-    0% {
-        transform: scaleY(0) translateX(0) translateY(0);
-    }
-    25% {
-        transform: scaleY(1.2) scaleX(1.2) translateX(0%) translateY(-20px) translateY(20px);
-    }
-    50% {
-        transform: scaleY(1.2) scaleX(1.2) translateX(30%) translateY(-20%);
-    }
-    100% {
-        transform: scaleY(0) translateX(0) translateY(0);
-    }
-}
-
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0) rotate(-45deg);
-    }
-    1.5625% {
-        transform: translateY(0) rotate(-44.765625deg);
-    }
-    3.125% {
-        transform: translateY(0) rotate(-44.53125deg);
-    }
-
-    4.6875% {
-        transform: translateY(0) rotate(-44.296875deg);
-    }
-
-    6.25% {
-        transform: translateY(0) rotate(-44.0625deg);
-    }
-
-    7.8125% {
-        transform: translateY(0) rotate(-43.828125deg);
-    }
-
-    9.375% {
-        transform: translateY(0) rotate(-43.59375deg);
-    }
-
-    10.9375% {
-        transform: translateY(0) rotate(-43.359375deg);
-    }
-
-    12.5% {
-        transform: translateY(0) rotate(-43.125deg);
-    }
-
-    14.0625% {
-        transform: translateY(0) rotate(-42.890625deg);
-    }
-
-    15.625% {
-        transform: translateY(0) rotate(-42.65625deg);
-    }
-
-    17.1875% {
-        transform: translateY(0) rotate(-42.421875deg);
-    }
-
-    18.75% {
-        transform: translateY(0) rotate(-42.1875deg);
-    }
-
-    20.3125% {
-        transform: translateY(0) rotate(-41.953125deg);
-    }
-
-    21.875% {
-        transform: translateY(0) rotate(-41.71875deg);
-    }
-
-    23.4375% {
-        transform: translateY(0) rotate(-41.484375deg);
-    }
-
-    25% {
-        transform: translateY(0) rotate(-41.25deg);
-    }
-
-    26.5625% {
-        transform: translateY(0) rotate(-41.015625deg);
-    }
-
-    28.125% {
-        transform: translateY(0) rotate(-40.78125deg);
-    }
-
-    29.6875% {
-        transform: translateY(0) rotate(-40.546875deg);
-    }
-
-    31.25% {
-        transform: translateY(0) rotate(-40.3125deg);
-    }
-
-    32.8125% {
-        transform: translateY(0) rotate(-40.078125deg);
-    }
-
-    34.375% {
-        transform: translateY(0) rotate(-39.84375deg);
-    }
-
-    35.9375% {
-        transform: translateY(0) rotate(-39.609375deg);
-    }
-
-    37.5% {
-        transform: translateY(0) rotate(-39.375deg);
-    }
-
-    39.0625% {
-        transform: translateY(0) rotate(-39.140625deg);
-    }
-
-    40.625% {
-        transform: translateY(0) rotate(-38.90625deg);
-    }
-
-    42.1875% {
-        transform: translateY(0) rotate(-38.671875deg);
-    }
-
-    43.75% {
-        transform: translateY(0) rotate(-38.4375deg);
-    }
-
-    45.3125% {
-        transform: translateY(0) rotate(-38.203125deg);
-    }
-
-    46.875% {
-        transform: translateY(0) rotate(-37.96875deg);
-    }
-
-    48.4375% {
-        transform: translateY(0) rotate(-37.734375deg);
-    }
-
-    50% {
-        transform: translateY(0) rotate(-37.5deg);
-    }
-
-    51.5625% {
-        transform: translateY(0) rotate(-37.265625deg);
-    }
-
-    53.125% {
-        transform: translateY(0) rotate(-37.03125deg);
-    }
-
-    54.6875% {
-        transform: translateY(0) rotate(-36.796875deg);
-    }
-
-    56.25% {
-        transform: translateY(0) rotate(-36.5625deg);
-    }
-
-    57.8125% {
-        transform: translateY(0) rotate(-36.328125deg);
-    }
-
-    59.375% {
-        transform: translateY(0) rotate(-36.09375deg);
-    }
-
-    60.9375% {
-        transform: translateY(0) rotate(-35.859375deg);
-    }
-
-    62.5% {
-        transform: translateY(0) rotate(-35.625deg);
-    }
-
-    64.0625% {
-        transform: translateY(0) rotate(-35.390625deg);
-    }
-
-    65.625% {
-        transform: translateY(0) rotate(-35.15625deg);
-    }
-
-    67.1875% {
-        transform: translateY(0) rotate(-34.921875deg);
-    }
-
-    68.75% {
-        transform: translateY(0) rotate(-34.6875deg);
-    }
-
-    70.3125% {
-        transform: translateY(0) rotate(-34.453125deg);
-    }
-
-    71.875% {
-        transform: translateY(0) rotate(-34.21875deg);
-    }
-
-    73.4375% {
-        transform: translateY(0) rotate(-33.984375deg);
-    }
-
-    75% {
-        transform: translateY(0) rotate(-33.75deg);
-    }
-
-    76.5625% {
-        transform: translateY(0) rotate(-33.515625deg);
-    }
-
-    78.125% {
-        transform: translateY(0) rotate(-33.28125deg);
-    }
-
-    79.6875% {
-        transform: translateY(0) rotate(-33.046875deg);
-    }
-
-    81.25% {
-        transform: translateY(0) rotate(-32.8125deg);
-    }
-
-    82.8125% {
-        transform: translateY(0) rotate(-32.578125deg);
-    }
-
-    84.375% {
-        transform: translateY(0) rotate(-32.34375deg);
-    }
-
-    85.9375% {
-        transform: translateY(0) rotate(-32.109375deg);
-    }
-
-    87.5% {
-        transform: translateY(0) rotate(-31.875deg);
-    }
-
-    89.0625% {
-        transform: translateY(0) rotate(-31.640625deg);
-    }
-
-    90.625% {
-        transform: translateY(0) rotate(-31.40625deg);
-    }
-
-    92.1875% {
-        transform: translateY(0) rotate(-31.171875deg);
-    }
-
-    93.75% {
-        transform: translateY(0) rotate(-30.9375deg);
-    }
-
-    95.3125% {
-        transform: translateY(0) rotate(-30.703125deg);
-    }
-
-    96.875% {
-        transform: translateY(0) rotate(-30.46875deg);
-    }
-
-    98.4375% {
-        transform: translateY(0) rotate(-30.234375deg);
-    }
 }
 
 @keyframes fadeOut {
