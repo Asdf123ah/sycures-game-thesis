@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './AdminPage.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./AdminPage.css";
 
 function AdminPage() {
   const [users, setUsers] = useState([]);
   const [userStatus, setUserStatus] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState(null);
-  const [sortDirection, setSortDirection] = useState('asc');
+  const [sortDirection, setSortDirection] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     // Fetch user data from your backend API
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://sycures-api.onrender.com/api/admin/users');
+        const response = await axios.get(
+          "https://sycures-api.onrender.com/api/admin/users"
+        );
         setUsers(response.data);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
       }
     };
 
@@ -28,10 +30,12 @@ function AdminPage() {
     // Fetch user data from your backend API
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://sycures-api.onrender.com/api/admin/user-status');
+        const response = await axios.get(
+          "https://sycures-api.onrender.com/api/admin/user-status"
+        );
         setUserStatus(response.data);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
       }
     };
 
@@ -43,10 +47,10 @@ function AdminPage() {
     if (!sortBy) return 0;
     const aValue = a[sortBy];
     const bValue = b[sortBy];
-    if (typeof aValue === 'string') {
-      return aValue.localeCompare(bValue) * (sortDirection === 'asc' ? 1 : -1);
+    if (typeof aValue === "string") {
+      return aValue.localeCompare(bValue) * (sortDirection === "asc" ? 1 : -1);
     } else {
-      return (aValue - bValue) * (sortDirection === 'asc' ? 1 : -1);
+      return (aValue - bValue) * (sortDirection === "asc" ? 1 : -1);
     }
   });
 
@@ -54,11 +58,11 @@ function AdminPage() {
   const handleSort = (column) => {
     if (sortBy === column) {
       // If already sorting by this column, toggle direction
-      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
       // If sorting by a different column, set column and default direction to asc
       setSortBy(column);
-      setSortDirection('asc');
+      setSortDirection("asc");
     }
   };
 
@@ -80,31 +84,33 @@ function AdminPage() {
   };
 
   return (
-    <div className='containerAdmin'>
+    <div className="containerAdmin">
       <h1>User Management</h1>
       <input
         type="text"
         placeholder="Search by name or email"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className='input'
+        className="input"
       />
-      <table className='table'>
-        <thead className='th'>
-          <tr className='tr'>
-            <th onClick={() => handleSort('name')}>Name</th>
-            <th onClick={() => handleSort('age')}>Age</th>
-            <th onClick={() => handleSort('course')}>Course</th>
-            <th onClick={() => handleSort('position')}>Position</th>
-            <th onClick={() => handleSort('email')}>Email</th>
-            <th onClick={() => handleSort('password')}>Password</th>
+      <table className="table">
+        <thead className="th">
+          <tr className="tr">
+            <th onClick={() => handleSort("name")}>Name</th>
+            <th onClick={() => handleSort("age")}>Age</th>
+            <th onClick={() => handleSort("course")}>Course</th>
+            <th onClick={() => handleSort("position")}>Position</th>
+            <th onClick={() => handleSort("email")}>Email</th>
+            <th onClick={() => handleSort("password")}>Password</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {sortedUsers
-            .filter((user) =>
-              user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              user.email.toLowerCase().includes(searchTerm.toLowerCase())
+            .filter(
+              (user) =>
+                user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                user.email.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
             .map((user) => (
@@ -114,14 +120,19 @@ function AdminPage() {
                 <td>{user.course}</td>
                 <td>{user.position}</td>
                 <td>{user.email}</td>
-                <td>{user.password.length > 10 ? user.password.slice(0, 15) + '...' : user.password}</td>
+                <td>{user.password.length > 10 ? user.password.slice(0, 15) + "..." : user.password}</td>
+                <td></td>
               </tr>
             ))}
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+        <button onClick={prevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
       <h1>User Management</h1>
       <input
@@ -129,12 +140,12 @@ function AdminPage() {
         placeholder="Search by name or email"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className='input'
+        className="input"
       />
-      <table className='table'>
-        <thead className='th'>
-          <tr className='tr'>
-            <th onClick={() => handleSort('name')}>Name</th>
+      <table className="table">
+        <thead className="th">
+          <tr className="tr">
+            <th onClick={() => handleSort("name")}>Name</th>
             <th>Category Skill 1</th>
             <th>Category Skill 1 Attempt</th>
             <th>Category Skill 1 Best Score</th>
@@ -151,9 +162,7 @@ function AdminPage() {
             <th>Category Skill 4 Attempt</th>
             <th>Category Skill 4 Best Score</th>
             <th>Category Skill 4 Best Time</th>
-            {/* <th>Categories</th> */}
-
-          </tr>
+\          </tr>
         </thead>
         <tbody>
           {sortedUsers
@@ -164,29 +173,97 @@ function AdminPage() {
             .map((user) => (
               <tr key={user._id}>
                 <td>{user.name}</td>
-                <td>{user.categories.length > 0 ? user.categories[0].category : ''}</td>
-                <td>{user.categories.length > 0 ? user.categories[0].categoryAttempt : ''}</td>
-                <td>{user.categories.length > 0 ? user.categories[0].bestScore : ''}</td>
-                <td>{user.categories.length > 0 ? user.categories[0].bestTime : ''}</td>
-                <td>{user.categories.length > 1 ? user.categories[1].category : ''}</td>
-                <td>{user.categories.length > 1 ? user.categories[1].categoryAttempt : ''}</td>
-                <td>{user.categories.length > 1 ? user.categories[1].bestScore : ''}</td>
-                <td>{user.categories.length > 1 ? user.categories[1].bestTime : ''}</td>
-                <td>{user.categories.length > 2 ? user.categories[2].category : ''}</td>
-                <td>{user.categories.length > 2 ? user.categories[2].categoryAttempt : ''}</td>
-                <td>{user.categories.length > 2 ? user.categories[2].bestScore : ''}</td>
-                <td>{user.categories.length > 2 ? user.categories[2].bestTime : ''}</td>
-                <td>{user.categories.length > 3 ? user.categories[3].category : ''}</td>
-                <td>{user.categories.length > 3 ? user.categories[3].categoryAttempt : ''}</td>
-                <td>{user.categories.length > 3 ? user.categories[3].bestScore : ''}</td>
-                <td>{user.categories.length > 3 ? user.categories[3].bestTime : ''}</td>
+                <td>
+                  {user.categories.length > 0
+                    ? user.categories[0].category
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 0
+                    ? user.categories[0].categoryAttempt
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 0
+                    ? user.categories[0].bestScore
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 0
+                    ? user.categories[0].bestTime
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 1
+                    ? user.categories[1].category
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 1
+                    ? user.categories[1].categoryAttempt
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 1
+                    ? user.categories[1].bestScore
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 1
+                    ? user.categories[1].bestTime
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 2
+                    ? user.categories[2].category
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 2
+                    ? user.categories[2].categoryAttempt
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 2
+                    ? user.categories[2].bestScore
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 2
+                    ? user.categories[2].bestTime
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 3
+                    ? user.categories[3].category
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 3
+                    ? user.categories[3].categoryAttempt
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 3
+                    ? user.categories[3].bestScore
+                    : ""}
+                </td>
+                <td>
+                  {user.categories.length > 3
+                    ? user.categories[3].bestTime
+                    : ""}
+                </td>
               </tr>
             ))}
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+        <button onClick={prevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
       <h1>User Management</h1>
       <input
@@ -194,12 +271,12 @@ function AdminPage() {
         placeholder="Search by name or email"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className='input'
+        className="input"
       />
-      <table className='table'>
-        <thead className='th'>
-          <tr className='tr'>
-            <th onClick={() => handleSort('name')}>Name</th>
+      <table className="table">
+        <thead className="th">
+          <tr className="tr">
+            <th onClick={() => handleSort("name")}>Name</th>
             <th>Total Attempts</th>
             <th>Average Score</th>
             <th>Average Time</th>
@@ -207,28 +284,31 @@ function AdminPage() {
           </tr>
         </thead>
         <tbody>
-          {sortedUsers
+          {userStatus
             .filter((user) =>
               user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
-            .map((userStatus) => (
-              <tr key={userStatus._id}>
-                <td>{userStatus.name}</td>
-                <td>{userStatus.totalAttempts}</td>
-                <td>{userStatus.overallAverageScore}</td>
-                <td>{userStatus.overallAverageTime}</td>
-                <td>{userStatus.isWheelSpinning}</td>
+            .map((user) => (
+              <tr key={user._id}>
+                <td>{user.name}</td>
+                <td>{user.totalAttempts}</td>
+                <td>{user.overallAverageScore}</td>
+                <td>{user.overallAverageTime}</td>
+                <td>{String(user.isWheelSpinning)}</td>
               </tr>
             ))}
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+        <button onClick={prevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
     </div>
-    
   );
 }
 

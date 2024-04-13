@@ -4,6 +4,7 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import "./ResultPage.css";
 import BackModal from "./Modal/BackModal";
 import sycuresLogo from "./Photos/gamePictureLogo.png";
+import LoadingSpinner from "./Modal/LoadingModal";
 
 function ResultPage() {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ function ResultPage() {
     question8Time,
     question9Time,
   } = location.state || {};
+  const [isLoading, setIsLoading] = useState(false);
   const [showBackModal, setShowBackModal] = useState(false);
   const isCorrectQuestionsArray = Object.values(isCorrectQuestions);
 
@@ -264,11 +266,31 @@ function ResultPage() {
     }
   };
 
+  const handlePlayAgain = async (category) => {
+    setIsLoading(true);
+    try {
+      await axios.post(
+        `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
+        {
+          category: category,
+        }
+      );
+
+      const categoryPath = category.toLowerCase().replace(/\s+/g, "-");
+
+      navigate(`/${categoryPath}/${userId}`, {});
+    } catch (error) {
+      console.error("Error updating user categories:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="containerResultPage">
       <button
         className="backButtonResultPage"
-        onClick={handleBackButtonClick}
+        onClick={handleProceedToCategorySelection}
       />
       <img
         className="sycuresLogoGameResultPage"
@@ -285,6 +307,18 @@ function ResultPage() {
             </div>
             <p className="headerTextResultPage">YOUR TIME:</p>
             <div className="timeBoxResultPage">{time} seconds</div>
+            <div
+              className="resultTryAgain"
+              onClick={() => handlePlayAgain(category)}
+            >
+              {isLoading ? (
+                <>
+                  <LoadingSpinner /> Play Again
+                </>
+              ) : (
+                "Play Again"
+              )}
+            </div>
           </div>
           <div className="column">
             <div className="messageResultPage">
