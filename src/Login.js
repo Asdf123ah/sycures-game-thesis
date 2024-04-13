@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import giantSycuresImage from "./Photos/giantSycures.png";
 import SycuresLogoLogin from "./Photos/SycuresLogoLogin.png";
 import SyGIF from "./Photos/sy.gif";
 
@@ -266,12 +265,9 @@ function Login() {
             CONTACT
           </button>
         </div>
-        <img
-          src={giantSycuresImage}
-          alt="Giant Sycures"
-          className="giant-sycures"
-          loading="eager"
-        />
+        <div>
+          <img className="robot-login" src={SyGIF} alt="sy.gif" loading="eager"/>
+        </div>
         <div className="black-box"></div>
         <div className="darkblue-box">
           <div className="login-register-container">
@@ -307,9 +303,6 @@ function Login() {
                 )}
               </div>
             </div>
-          </div>
-          <div>
-            <img className="robot-login" src={SyGIF} alt="sy.gif" />
           </div>
         </div>
       </div>

@@ -2444,64 +2444,10 @@
     position: absolute;
     width: 75dvw;
     height: auto;
-    top: 55%;
-    left: -122%;
+    margin-top: -18%;
+    left: -13%;
     z-index: 6;
     display: block;
-}
-
-.blinking-eye-left {
-    top: 79%;
-    left: -57%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: block;
-
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: block;
-
-}   
-
-.robot-login-rightarm {
-    top: 80%;
-    left: -86%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-    display: block;
-
-}
-
-.robot-login-leftarm {
-    top: 68%;
-    left: -87%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
-    display: block;
-
 }
 
 .login-register-container {
@@ -2983,9 +2929,9 @@
     position: absolute;
     width: 62dvw;
     height: auto;
-    top: 50%;
-    left: -108%;
-    z-index: 6;
+    margin-top: -15%;
+    left: -7%;
+    z-index: 0;
 }
 
 .login-register-container {
@@ -3467,9 +3413,9 @@
     position: absolute;
     width: 62dvw;
     height: auto;
-    top: 47%;
-    left: -108%;
-    z-index: 6;
+    margin-top: -15%;
+    left: -7%;
+    z-index: 0;
 }
 
 .login-register-container {
