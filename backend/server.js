@@ -746,10 +746,10 @@ app.get("/api/admin/users", async (req, res) => {
 });
 
 // Define a new route to handle fetching all user status data
-app.get("api/admin/user-status", async (req, res) => {
+app.get("/api/admin/user-status", async (req, res) => {
   try {
     // Query the userStatus collection to retrieve all documents
-    const userStatusData = await connection.db.collection("userStatus").find({})
+    const userStatusData = await connection.db.collection("userStatus").find({}).toArray();
 
     // Log the retrieved data
     console.log(userStatusData);
@@ -761,6 +761,7 @@ app.get("api/admin/user-status", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 
 app.listen(PORT, () => {
