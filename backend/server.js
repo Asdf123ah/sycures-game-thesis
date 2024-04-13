@@ -25,6 +25,7 @@ connection.once("open", () => {
 const userSchema = new mongoose.Schema({
   name: String,
   age: Number,
+  course: Number,
   email: String,
   password: String,
   categories: [
@@ -382,7 +383,7 @@ app.get("/user-status/:userId", async (req, res) => {
 });
 
 app.post("/api/user/register", async (req, res) => {
-  const { name, age, email, password } = req.body;
+  const { name, age, course, email, password } = req.body;
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -392,6 +393,7 @@ app.post("/api/user/register", async (req, res) => {
     const newUser = new User({
       name,
       age,
+      course,
       email,
       password: hashedPassword,
       categories: [],
@@ -400,6 +402,7 @@ app.post("/api/user/register", async (req, res) => {
     res.status(201).json({
       _id: savedUser._id,
       name: savedUser.name,
+      course: savedUser.course,
       age: savedUser.age,
       email: savedUser.email,
     });
