@@ -367,60 +367,6 @@
 
 }
 
-.blinking-eye-left {
-    top: 79%;
-    left: -57%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}   
-
-.robot-login-rightarm {
-    top: 80%;
-    left: -86%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-    display: none;
-
-}
-
-.robot-login-leftarm {
-    top: 68%;
-    left: -87%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
-    display: none;
-
-}
-
 .login-register-container {
     position: relative;
     margin-bottom: 3%;
@@ -913,60 +859,6 @@
     top: 74%;
     left: -82%;
     z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-left {
-    top: 79%;
-    left: -57%;
-    width: 60px;
-    height: 60px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}
-
-.blinking-eye-right {
-    top: 80%;
-    left: -46%;
-    width: 52px;
-    height: 52px;
-    background-color: #1F144B;
-    border-radius: 50%;
-    position: absolute;
-    animation: blinklogin 3s infinite alternate;
-    border: 1px solid #FFFFFF;
-    z-index: 6;
-    display: none;
-
-}   
-
-.robot-login-rightarm {
-    top: 80%;
-    left: -86%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    z-index: 8;
-    animation: moveUpDown 1s infinite;
-    display: none;
-
-}
-
-.robot-login-leftarm {
-    top: 68%;
-    left: -87%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    transform: scaleX(-1);
-    z-index: 8;
     display: none;
 
 }

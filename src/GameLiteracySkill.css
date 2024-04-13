@@ -2596,7 +2596,7 @@
 }
 
 /* Styles for screens(3xl) */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1800px) {
 .containerGame {
     width: 100vw;
     height: 100vh;

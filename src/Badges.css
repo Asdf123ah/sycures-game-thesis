@@ -1423,7 +1423,7 @@
 }
 
 /* Styles for screens(3xl) */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1800px) {
 .popup-statistic {
     position: fixed;
     top: 50%;
