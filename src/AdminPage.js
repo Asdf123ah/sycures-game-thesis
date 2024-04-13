@@ -99,7 +99,73 @@ function AdminPage() {
                 <td>{user.course}</td>
                 <td>{user.position}</td>
                 <td>{user.email}</td>
-                <td>{user.password.length > 10 ? user.password.slice(0, 10) + '...' : user.password}</td>
+                <td>{user.password.length > 10 ? user.password.slice(0, 15) + '...' : user.password}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+      <div className="pagination">
+        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+      </div>
+      <h1>User Management</h1>
+      <input
+        type="text"
+        placeholder="Search by name or email"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className='input'
+      />
+      <table className='table'>
+        <thead className='th'>
+          <tr className='tr'>
+            <th onClick={() => handleSort('name')}>Name</th>
+            <th>Category Skill 1</th>
+            <th>Category Skill 1 Attempt</th>
+            <th>Category Skill 1 Best Score</th>
+            <th>Category Skill 1 Best Time</th>
+            <th>Category Skill 2</th>
+            <th>Category Skill 2 Attempt</th>
+            <th>Category Skill 2 Best Score</th>
+            <th>Category Skill 2 Best Time</th>
+            <th>Category Skill 3</th>
+            <th>Category Skill 3 Attempt</th>
+            <th>Category Skill 3 Best Score</th>
+            <th>Category Skill 3 Best Time</th>
+            <th>Category Skill 4</th>
+            <th>Category Skill 4 Attempt</th>
+            <th>Category Skill 4 Best Score</th>
+            <th>Category Skill 4 Best Time</th>
+            {/* <th>Categories</th> */}
+
+          </tr>
+        </thead>
+        <tbody>
+          {sortedUsers
+            .filter((user) =>
+              user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+              user.email.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
+            .map((user) => (
+              <tr key={user._id}>
+                <td>{user.name}</td>
+                <td>{user.categories.length > 0 ? user.categories[0].category : ''}</td>
+                <td>{user.categories.length > 0 ? user.categories[0].categoryAttempt : ''}</td>
+                <td>{user.categories.length > 0 ? user.categories[0].bestScore : ''}</td>
+                <td>{user.categories.length > 0 ? user.categories[0].bestTime : ''}</td>
+                <td>{user.categories.length > 1 ? user.categories[1].category : ''}</td>
+                <td>{user.categories.length > 1 ? user.categories[1].categoryAttempt : ''}</td>
+                <td>{user.categories.length > 1 ? user.categories[1].bestScore : ''}</td>
+                <td>{user.categories.length > 1 ? user.categories[1].bestTime : ''}</td>
+                <td>{user.categories.length > 2 ? user.categories[2].category : ''}</td>
+                <td>{user.categories.length > 2 ? user.categories[2].categoryAttempt : ''}</td>
+                <td>{user.categories.length > 2 ? user.categories[2].bestScore : ''}</td>
+                <td>{user.categories.length > 2 ? user.categories[2].bestTime : ''}</td>
+                <td>{user.categories.length > 3 ? user.categories[3].category : ''}</td>
+                <td>{user.categories.length > 3 ? user.categories[3].categoryAttempt : ''}</td>
+                <td>{user.categories.length > 3 ? user.categories[3].bestScore : ''}</td>
+                <td>{user.categories.length > 3 ? user.categories[3].bestTime : ''}</td>
               </tr>
             ))}
         </tbody>
@@ -109,6 +175,7 @@ function AdminPage() {
         <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
       </div>
     </div>
+    
   );
 }
 
