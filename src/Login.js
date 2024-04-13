@@ -33,12 +33,16 @@ function Login() {
           }
         );
 
-        const savedUser = response.data;
+        const userData = response.data;
 
-        setShowModalLoginSuccess(true);
-        setTimeout(() => {
-          navigate(`/category-selection/${savedUser._id}`);
-        }, 1000);
+        if (userData.position === "student") {
+          setShowModalLoginSuccess(true);
+          setTimeout(() => {
+            navigate(`/category-selection/${userData._id}`);
+          }, 1000);
+        } else if (userData.position === "admin") {
+          navigate(`/admin-page`);
+        }
       } catch (error) {
         setShowModalInvalid(true);
       }

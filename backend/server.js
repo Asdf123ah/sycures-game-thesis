@@ -25,6 +25,8 @@ connection.once("open", () => {
 const userSchema = new mongoose.Schema({
   name: String,
   age: Number,
+  course: String,
+  position: String,
   email: String,
   password: String,
   categories: [
@@ -120,76 +122,16 @@ async function createUserStatus() {
         $addFields: {
           currCorrectAnswer: {
             $sum: [
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9",
-                  1,
-                  0,
-                ],
-              },
-              {
-                $cond: [
-                  "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10",
-                  1,
-                  0,
-                ],
-              },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9", 1, 0, ], },
+              { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10", 1, 0, ], },
             ],
           },
           totalAttempts: "$categories.categoryAttempt",
@@ -246,37 +188,39 @@ async function createUserStatus() {
           isWheelSpinning: {
             $cond: {
               if: {
-                $or: [
-                  {
-                    $and: [
-                      { $eq: ["$categoryAttempt", 1] },
-                      { $lt: ["$currCorrectAnswer", 7] },
-                      { $gte: ["$totalTimeSpent", 240] }
-                    ]
-                  },
-                  {
-                    $and: [
-                      { $gte: ["$categoryAttempt", 2] },
-                      { $lt:  ["$currCorrectAnswer", 7] },
-                      { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
-                      { $gte: ["$totalTimeSpent", 240] }
-                    ]
-                  }
-                ]
+                $and: [
+                  { $eq: ["$categoryAttempt", 1] },
+                  { $lt: ["$currCorrectAnswer", 7] },
+                ],
               },
               then: true,
               else: {
                 $cond: {
-                  if: { $and: [{ $eq: ["$categoryAttempt", 1] }, { $gte: ["$currCorrectAnswer", 7] }] },
+                  if: { $gte: ["$currCorrectAnswer", 7] },
                   then: false,
-                  else: true
-                }
-              }
-            }
+                  else: {
+                    $cond: {
+                      if: {
+                        $and: [
+                          { $gte: ["$categoryAttempt", 2] },
+                          { $lt: ["$currCorrectAnswer", 7] },
+                          {
+                            $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"],
+                          },
+                        ],
+                      },
+                      then: true,
+                      else: false,
+                    },
+                  },
+                },
+              },
+            },
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] }
-        }
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
+        },
       },
+
       {
         $addFields: {
           averageScore: {
@@ -440,7 +384,7 @@ app.get("/user-status/:userId", async (req, res) => {
 });
 
 app.post("/api/user/register", async (req, res) => {
-  const { name, age, email, password } = req.body;
+  const { name, age, course, email, password } = req.body;
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -450,6 +394,8 @@ app.post("/api/user/register", async (req, res) => {
     const newUser = new User({
       name,
       age,
+      course,
+      position: "student",
       email,
       password: hashedPassword,
       categories: [],
@@ -458,6 +404,8 @@ app.post("/api/user/register", async (req, res) => {
     res.status(201).json({
       _id: savedUser._id,
       name: savedUser.name,
+      course: savedUser.course,
+      position: savedUser.position,
       age: savedUser.age,
       email: savedUser.email,
     });
@@ -478,6 +426,8 @@ app.post("/api/user/login", async (req, res) => {
       _id: user._id,
       name: user.name,
       age: user.age,
+      course: user.course,
+      position: user.position,
       email: user.email,
     });
   } catch (error) {
