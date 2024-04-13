@@ -4,6 +4,7 @@ import './AdminPage.css';
 
 function AdminPage() {
   const [users, setUsers] = useState([]);
+  const [userStatus, setUserStatus] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState(null);
   const [sortDirection, setSortDirection] = useState('asc');
@@ -15,6 +16,20 @@ function AdminPage() {
       try {
         const response = await axios.get('https://sycures-api.onrender.com/api/admin/users');
         setUsers(response.data);
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchData();
+  }, []); // Run once when the component mounts
+
+  useEffect(() => {
+    // Fetch user data from your backend API
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://sycures-api.onrender.com/api/admin/user-status');
+        setUserStatus(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -143,8 +158,7 @@ function AdminPage() {
         <tbody>
           {sortedUsers
             .filter((user) =>
-              user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              user.email.toLowerCase().includes(searchTerm.toLowerCase())
+              user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
             .map((user) => (
@@ -166,6 +180,45 @@ function AdminPage() {
                 <td>{user.categories.length > 3 ? user.categories[3].categoryAttempt : ''}</td>
                 <td>{user.categories.length > 3 ? user.categories[3].bestScore : ''}</td>
                 <td>{user.categories.length > 3 ? user.categories[3].bestTime : ''}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+      <div className="pagination">
+        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+      </div>
+      <h1>User Management</h1>
+      <input
+        type="text"
+        placeholder="Search by name or email"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className='input'
+      />
+      <table className='table'>
+        <thead className='th'>
+          <tr className='tr'>
+            <th onClick={() => handleSort('name')}>Name</th>
+            <th>Total Attempts</th>
+            <th>Average Score</th>
+            <th>Average Time</th>
+            <th>Is Wheel Spinning</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sortedUsers
+            .filter((user) =>
+              user.name.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
+            .map((userStatus) => (
+              <tr key={userStatus._id}>
+                <td>{userStatus.name}</td>
+                <td>{userStatus.totalAttempts}</td>
+                <td>{userStatus.overallAverageScore}</td>
+                <td>{userStatus.overallAverageTime}</td>
+                <td>{userStatus.isWheelSpinning}</td>
               </tr>
             ))}
         </tbody>
