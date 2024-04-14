@@ -9,18 +9,19 @@ function AdminPage() {
   const [users, setUsers] = useState([]);
   const [userStatus, setUserStatus] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState(null);
-  const [sortDirection, setSortDirection] = useState("asc");
+  const [sortBy1, setSortBy1] = useState(null);
+  const [sortDirection1, setSortDirection1] = useState("asc");
+  const [sortBy2, setSortBy2] = useState(null);
+  const [sortDirection2, setSortDirection2] = useState("asc");
+  const [sortBy3, setSortBy3] = useState(null);
+  const [sortDirection3, setSortDirection3] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
   const [editModeRowId, setEditModeRowId] = useState(null);
 
   useEffect(() => {
-    // Fetch user data from your backend API
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://sycures-api.onrender.com/api/admin/users"
-        );
+        const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -28,15 +29,12 @@ function AdminPage() {
     };
 
     fetchData();
-  }, []); // Run once when the component mounts
+  }, []);
 
   useEffect(() => {
-    // Fetch user data from your backend API
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://sycures-api.onrender.com/api/admin/user-status"
-        );
+        const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
         setUserStatus(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -44,43 +42,86 @@ function AdminPage() {
     };
 
     fetchData();
-  }, []); // Run once when the component mounts
+  }, []);
 
-  // Sort users based on column and direction
-  const sortedUsers = users.slice().sort((a, b) => {
-    if (!sortBy) return 0;
-    const aValue = a[sortBy];
-    const bValue = b[sortBy];
+  // Sort users in table 1
+  const sortedUsers1 = users.slice().sort((a, b) => {
+    if (!sortBy1) return 0;
+    const aValue = a[sortBy1];
+    const bValue = b[sortBy1];
     if (typeof aValue === "string") {
-      return aValue.localeCompare(bValue) * (sortDirection === "asc" ? 1 : -1);
+      return aValue.localeCompare(bValue) * (sortDirection1 === "asc" ? 1 : -1);
     } else {
-      return (aValue - bValue) * (sortDirection === "asc" ? 1 : -1);
+      return (aValue - bValue) * (sortDirection1 === "asc" ? 1 : -1);
     }
   });
 
-  // Handle sorting
-  const handleSort = (column) => {
-    if (sortBy === column) {
-      // If already sorting by this column, toggle direction
-      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+  // Sort users in table2
+  const sortedUsers2 = users.slice().sort((a, b) => {
+    if (!sortBy2) return 0;
+    const aValue = a[sortBy2];
+    const bValue = b[sortBy2];
+    if (typeof aValue === "string") {
+      return aValue.localeCompare(bValue) * (sortDirection2 === "asc" ? 1 : -1);
     } else {
-      // If sorting by a different column, set column and default direction to asc
-      setSortBy(column);
-      setSortDirection("asc");
+      return (aValue - bValue) * (sortDirection2 === "asc" ? 1 : -1);
+    }
+  });
+
+  // Sort users in table3
+  const sortedUserStatus = userStatus.slice().sort((a, b) => {
+    if (!sortBy3) return 0;
+    const aValue = a[sortBy3];
+    const bValue = b[sortBy3];
+    if (typeof aValue === "string") {
+      return aValue.localeCompare(bValue) * (sortDirection3 === "asc" ? 1 : -1);
+    } else {
+      return (aValue - bValue) * (sortDirection3 === "asc" ? 1 : -1);
+    }
+  }); 
+
+  // Handle sorting in table1
+  const handleSort1 = (column) => {
+    if (sortBy1 === column) {
+      setSortDirection1(sortDirection1 === "asc" ? "desc" : "asc");
+    } else {
+      setSortBy1(column);
+      setSortDirection1("asc");
+    }
+  };
+
+  // Handle sorting in table2
+  const handleSort2 = (column) => {
+    if (sortBy2 === column) {
+      setSortDirection2(sortDirection2 === "asc" ? "desc" : "asc");
+    } else {
+      setSortBy2(column);
+      setSortDirection2("asc");
+    }
+  };
+
+  // Handle sorting in table 3
+  const handleSort3 = (column) => {
+    if (sortBy3 === column) {
+      setSortDirection3(sortDirection3 === "asc" ? "desc" : "asc");
+    } else {
+      setSortBy3(column);
+      setSortDirection3("asc");
     }
   };
 
   // Pagination
   const usersPerPage = 20;
-  const totalPages = Math.ceil(sortedUsers.length / usersPerPage);
+  const totalPages = Math.ceil(sortedUsers1.length / usersPerPage);
 
-  // Change page
+  // Next page
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
 
+  // Previous page
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -101,13 +142,10 @@ const handleEditChange = (e, userId, field) => {
 // Function to save edits
 const handleSave = async (userId, updatedUserData) => {
   try {
-    // Send a PUT request to update the user data on the backend
     await axios.put(`https://sycures-api.onrender.com/api/admin/users/${userId}`, updatedUserData);
     
-    // Exit edit mode after successful save
     setEditModeRowId(null);
     
-    // Optionally, you can fetch the updated user list after saving to ensure the UI reflects the changes
     const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
     setUsers(response.data);
   } catch (error) {
@@ -118,15 +156,12 @@ const handleSave = async (userId, updatedUserData) => {
 // Function to cancel edit
 const handleCancelEdit = () => {
   setEditModeRowId(null);
-  // If you need to revert any changes made during edit, you may need to reset the user data to its original state
 };
 
 // Function to handle delete action
 const handleDelete = async (userId) => {
   try {
-    // Send a request to your backend to delete the user with the provided ID
     await axios.delete(`https://sycures-api.onrender.com/api/admin/users/${userId}`);
-    // After successful deletion, fetch the updated user list
     const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
     setUsers(response.data);
   } catch (error) {
@@ -140,10 +175,11 @@ const handleDelete = async (userId) => {
         className="backButtonForgotPassword"
         onClick={() => navigate("/login")}
       />
-      <h1>User Management</h1>
+      
+      <h1>User's Information</h1>
       <input
         type="text"
-        placeholder="Search by name or email"
+        placeholder="Search by name"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="input"
@@ -151,56 +187,53 @@ const handleDelete = async (userId) => {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>
+            <th onClick={() => handleSort1("name")}>
               Name <FaSort />
             </th>
-            <th onClick={() => handleSort("age")}>
+            <th onClick={() => handleSort1("age")}>
               Age <FaSort />
             </th>
-            <th onClick={() => handleSort("course")}>
+            <th onClick={() => handleSort1("course")}>
               Course <FaSort />
             </th>
-            <th onClick={() => handleSort("position")}>
+            <th onClick={() => handleSort1("position")}>
               Position <FaSort />
             </th>
-            <th onClick={() => handleSort("email")}>
+            <th onClick={() => handleSort1("email")}>
               Email <FaSort />
             </th>
-            <th onClick={() => handleSort("password")}>
+            <th onClick={() => handleSort1("password")}>
               Password <FaSort />
             </th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-{sortedUsers.map((user) => (
-  <tr key={user._id}>
-    <td>{editModeRowId === user._id ? <input type="text" value={user.name} onChange={(e) => handleEditChange(e, user._id, 'name')} /> : user.name}</td>
-    <td>{editModeRowId === user._id ? <input type="text" value={user.age} onChange={(e) => handleEditChange(e, user._id, 'age')} /> : user.age}</td>
-    <td>{editModeRowId === user._id ? <input type="text" value={user.course} onChange={(e) => handleEditChange(e, user._id, 'course')} /> : user.course}</td>
-    <td>{editModeRowId === user._id ? <input type="text" value={user.position} onChange={(e) => handleEditChange(e, user._id, 'position')} /> : user.position}</td>
-    <td>{editModeRowId === user._id ? <input type="text" value={user.email} onChange={(e) => handleEditChange(e, user._id, 'email')} /> : user.email}</td>
-    <td>
-      {user.password.length > 10
-      ? user.password.slice(0, 15) + "..."
-      : user.password}
-    </td>
-    <td>
-      {editModeRowId === user._id ? 
-        <React.Fragment>
-          <button onClick={() => handleSave(user._id)}>Save</button>
-          <button onClick={() => handleCancelEdit()}>Cancel</button>
-        </React.Fragment>
-      : 
-        <React.Fragment>
-          <button onClick={() => handleEdit(user._id)}>Edit</button>
-          <button onClick={() => handleDelete(user._id)}>Delete</button>
-        </React.Fragment>
-      }
-    </td>
-  </tr>
-))}
-
+          {sortedUsers1.map((user) => (
+            <tr key={user._id}>
+              <td>{editModeRowId === user._id ? <input type="text" value={user.name} onChange={(e) => handleEditChange(e, user._id, 'name')} /> : user.name}</td>
+              <td>{editModeRowId === user._id ? <input type="text" value={user.age} onChange={(e) => handleEditChange(e, user._id, 'age')} /> : user.age}</td>
+              <td>{editModeRowId === user._id ? <input type="text" value={user.course} onChange={(e) => handleEditChange(e, user._id, 'course')} /> : user.course}</td>
+              <td>{editModeRowId === user._id ? <input type="text" value={user.position} onChange={(e) => handleEditChange(e, user._id, 'position')} /> : user.position}</td>
+              <td>{editModeRowId === user._id ? <input type="text" value={user.email} onChange={(e) => handleEditChange(e, user._id, 'email')} /> : user.email}</td>
+              <td>
+                {user.password.length > 10 ? user.password.slice(0, 15) + "..." : user.password}
+              </td>
+              <td className="action">
+                {editModeRowId === user._id ? 
+                  <>
+                    <button onClick={() => handleSave(user._id, user)}>Save</button>
+                    <button onClick={() => handleCancelEdit()}>Cancel</button>
+                  </>
+                : 
+                  <>
+                    <button onClick={() => handleEdit(user._id)}>Edit</button>
+                    <button onClick={() => handleDelete(user._id)}>Delete</button>
+                  </>
+                }
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <div className="pagination">
@@ -212,10 +245,10 @@ const handleDelete = async (userId) => {
         </button>
       </div>
 
-      <h1>User Management</h1>
+      <h1>User's Performance</h1>
       <input
         type="text"
-        placeholder="Search by name or email"
+        placeholder="Search by name"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="input"
@@ -223,7 +256,7 @@ const handleDelete = async (userId) => {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>
+            <th onClick={() => handleSort2("name")}>
               Name <FaSort />
             </th>
             <th>Category Skill 1</th>
@@ -241,11 +274,11 @@ const handleDelete = async (userId) => {
             <th>Category Skill 4</th>
             <th>Category Skill 4 Attempt</th>
             <th>Category Skill 4 Best Score</th>
-            <th>Category Skill 4 Best Time</th>\{" "}
+            <th>Category Skill 4 Best Time</th>{" "}
           </tr>
         </thead>
         <tbody>
-          {sortedUsers
+          {sortedUsers2
             .filter((user) =>
               user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
@@ -345,10 +378,10 @@ const handleDelete = async (userId) => {
           Next
         </button>
       </div>
-      <h1>User Management</h1>
+      <h1>User's Statistic</h1>
       <input
         type="text"
-        placeholder="Search by name or email"
+        placeholder="Search by name"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="input"
@@ -356,7 +389,7 @@ const handleDelete = async (userId) => {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>
+            <th onClick={() => handleSort3("name")}>
               Name <FaSort />
             </th>
             <th>Total Attempts</th>
@@ -366,7 +399,7 @@ const handleDelete = async (userId) => {
           </tr>
         </thead>
         <tbody>
-          {userStatus
+          {sortedUserStatus
             .filter((user) =>
               user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )

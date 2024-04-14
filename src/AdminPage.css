@@ -3,23 +3,29 @@
 .containerAdmin {
     width: 100vw;
     height: 100vh;
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     position: relative;
     background-image: url('./Photos/containerGameBlueBG.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    align-items: flex-start;
-    overflow-x: hidden;
+    align-items: center;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
     padding: 2%;
+    box-sizing: border-box; /* Include padding in width and height calculation */
 }
 
 
 .table {
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
     border-collapse: collapse;
-    width: 100%;
+    width: calc(100% - 4%); /* Adjust width to account for padding */
+    max-width: 100%; 
+    font-size: 16px; /* Adjust the font size as needed */
+    overflow-x: scroll;
+
 }
 
 .th {
@@ -87,4 +93,17 @@
 
 .page-link:hover {
     color: red;
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.action button{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
