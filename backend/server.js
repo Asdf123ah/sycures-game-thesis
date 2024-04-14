@@ -762,6 +762,19 @@ app.get("/api/admin/user-status", async (req, res) => {
   }
 });
 
+// Route to update user data
+app.put("/api/admin/users/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  const userData = req.body;
+  try {
+    const updatedUser = await User.findByIdAndUpdate(userId, userData, { new: true });
+    res.json(updatedUser);
+  } catch (error) {
+    console.error("Error updating user data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 
 app.listen(PORT, () => {
