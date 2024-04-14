@@ -50,7 +50,7 @@ function ResultPage() {
   };
 
   const handleProceedToCategorySelection = () => {
-    handleCloseBackModal();
+    handleBackButtonClick();
     navigate(`/category-selection/${userId}`);
   };
 
@@ -290,7 +290,7 @@ function ResultPage() {
     <div className="containerResultPage">
       <button
         className="backButtonResultPage"
-        onClick={handleProceedToCategorySelection}
+        onClick={handleBackButtonClick}
       />
       <img
         className="sycuresLogoGameResultPage"
