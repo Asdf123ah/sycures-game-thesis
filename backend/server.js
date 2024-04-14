@@ -775,6 +775,18 @@ app.put("/api/admin/users/:userId", async (req, res) => {
   }
 });
 
+app.delete("/api/admin/users/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    // Delete the user with the provided ID from the database
+    await User.findByIdAndDelete(userId);
+    res.status(204).send(); // Send a 204 No Content response indicating successful deletion
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 
 app.listen(PORT, () => {
