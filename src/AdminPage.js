@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AdminPage.css";
 import { useNavigate } from "react-router-dom";
+import { FaSort } from "react-icons/fa";
 
 function AdminPage() {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ function AdminPage() {
   const [sortBy, setSortBy] = useState(null);
   const [sortDirection, setSortDirection] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
+  const [editModeRowId, setEditModeRowId] = useState(null);
 
   useEffect(() => {
     // Fetch user data from your backend API
@@ -85,6 +87,53 @@ function AdminPage() {
     }
   };
 
+// Function to handle edit action
+const handleEdit = (userId) => {
+  setEditModeRowId(userId);
+};
+
+// Function to handle change in input fields during edit
+const handleEditChange = (e, userId, field) => {
+  const { value } = e.target;
+  setUsers(users.map(user => user._id === userId ? { ...user, [field]: value } : user));
+};
+
+// Function to save edits
+const handleSave = async (userId, updatedUserData) => {
+  try {
+    // Send a PUT request to update the user data on the backend
+    await axios.put(`https://sycures-api.onrender.com/api/admin/users/${userId}`, updatedUserData);
+    
+    // Exit edit mode after successful save
+    setEditModeRowId(null);
+    
+    // Optionally, you can fetch the updated user list after saving to ensure the UI reflects the changes
+    const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
+    setUsers(response.data);
+  } catch (error) {
+    console.error("Error saving user data:", error);
+  }
+};
+
+// Function to cancel edit
+const handleCancelEdit = () => {
+  setEditModeRowId(null);
+  // If you need to revert any changes made during edit, you may need to reset the user data to its original state
+};
+
+// Function to handle delete action
+const handleDelete = async (userId) => {
+  try {
+    // Send a request to your backend to delete the user with the provided ID
+    await axios.delete(`https://sycures-api.onrender.com/api/admin/users/${userId}`);
+    // After successful deletion, fetch the updated user list
+    const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
+    setUsers(response.data);
+  } catch (error) {
+    console.error("Error deleting user:", error);
+  }
+};
+
   return (
     <div className="containerAdmin">
       <button
@@ -102,38 +151,56 @@ function AdminPage() {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>Name</th>
-            <th onClick={() => handleSort("age")}>Age</th>
-            <th onClick={() => handleSort("course")}>Course</th>
-            <th onClick={() => handleSort("position")}>Position</th>
-            <th onClick={() => handleSort("email")}>Email</th>
-            <th onClick={() => handleSort("password")}>Password</th>
+            <th onClick={() => handleSort("name")}>
+              Name <FaSort />
+            </th>
+            <th onClick={() => handleSort("age")}>
+              Age <FaSort />
+            </th>
+            <th onClick={() => handleSort("course")}>
+              Course <FaSort />
+            </th>
+            <th onClick={() => handleSort("position")}>
+              Position <FaSort />
+            </th>
+            <th onClick={() => handleSort("email")}>
+              Email <FaSort />
+            </th>
+            <th onClick={() => handleSort("password")}>
+              Password <FaSort />
+            </th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {sortedUsers
-            .filter(
-              (user) =>
-                user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                user.email.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-            .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
-            .map((user) => (
-              <tr key={user._id}>
-                <td>{user.name}</td>
-                <td>{user.age}</td>
-                <td>{user.course}</td>
-                <td>{user.position}</td>
-                <td>{user.email}</td>
-                <td>
-                  {user.password.length > 10
-                    ? user.password.slice(0, 15) + "..."
-                    : user.password}
-                </td>
-                <td></td>
-              </tr>
-            ))}
+{sortedUsers.map((user) => (
+  <tr key={user._id}>
+    <td>{editModeRowId === user._id ? <input type="text" value={user.name} onChange={(e) => handleEditChange(e, user._id, 'name')} /> : user.name}</td>
+    <td>{editModeRowId === user._id ? <input type="text" value={user.age} onChange={(e) => handleEditChange(e, user._id, 'age')} /> : user.age}</td>
+    <td>{editModeRowId === user._id ? <input type="text" value={user.course} onChange={(e) => handleEditChange(e, user._id, 'course')} /> : user.course}</td>
+    <td>{editModeRowId === user._id ? <input type="text" value={user.position} onChange={(e) => handleEditChange(e, user._id, 'position')} /> : user.position}</td>
+    <td>{editModeRowId === user._id ? <input type="text" value={user.email} onChange={(e) => handleEditChange(e, user._id, 'email')} /> : user.email}</td>
+    <td>
+      {user.password.length > 10
+      ? user.password.slice(0, 15) + "..."
+      : user.password}
+    </td>
+    <td>
+      {editModeRowId === user._id ? 
+        <React.Fragment>
+          <button onClick={() => handleSave(user._id)}>Save</button>
+          <button onClick={() => handleCancelEdit()}>Cancel</button>
+        </React.Fragment>
+      : 
+        <React.Fragment>
+          <button onClick={() => handleEdit(user._id)}>Edit</button>
+          <button onClick={() => handleDelete(user._id)}>Delete</button>
+        </React.Fragment>
+      }
+    </td>
+  </tr>
+))}
+
         </tbody>
       </table>
       <div className="pagination">
@@ -144,6 +211,7 @@ function AdminPage() {
           Next
         </button>
       </div>
+
       <h1>User Management</h1>
       <input
         type="text"
@@ -155,7 +223,9 @@ function AdminPage() {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>Name</th>
+            <th onClick={() => handleSort("name")}>
+              Name <FaSort />
+            </th>
             <th>Category Skill 1</th>
             <th>Category Skill 1 Attempt</th>
             <th>Category Skill 1 Best Score</th>
@@ -286,7 +356,9 @@ function AdminPage() {
       <table className="table">
         <thead className="th">
           <tr className="tr">
-            <th onClick={() => handleSort("name")}>Name</th>
+            <th onClick={() => handleSort("name")}>
+              Name <FaSort />
+            </th>
             <th>Total Attempts</th>
             <th>Average Score</th>
             <th>Average Time</th>
