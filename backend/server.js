@@ -107,7 +107,6 @@ const User = mongoose.model("User", userSchema);
 
 async function createUserStatus() {
   try {
-    // Convert raw data to categorized data
     const pipeline = [
       {
         $unwind: "$categories",
@@ -362,20 +361,14 @@ async function createUserStatus() {
 // Define a new route to handle fetching user status data
 app.get("/user-status/:userId", async (req, res) => {
   try {
-    const userId = req.params.userId; // Extract userId from URL parameters
+    const userId = req.params.userId;
 
-    // Convert the ID string to an ObjectId
     const objectId = new ObjectId(userId);
 
-    // Query the userStatus collection to retrieve data with the specified ID
-    const userStatusData = await connection.db
-      .collection("userStatus")
-      .findOne({ _id: objectId });
+    const userStatusData = await connection.db.collection("userStatus").findOne({ _id: objectId });
 
-    // Log the retrieved data
     console.log(userStatusData);
 
-    // Send the retrieved data as the response
     res.json(userStatusData);
   } catch (error) {
     console.error("Error fetching user status data:", error);
@@ -383,6 +376,7 @@ app.get("/user-status/:userId", async (req, res) => {
   }
 });
 
+// User registration endpoint
 app.post("/api/user/register", async (req, res) => {
   const { name, age, course, email, password } = req.body;
   try {
@@ -415,6 +409,7 @@ app.post("/api/user/register", async (req, res) => {
   }
 });
 
+// User login endpoint
 app.post("/api/user/login", async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -436,6 +431,7 @@ app.post("/api/user/login", async (req, res) => {
   }
 });
 
+// Password reset endpoint
 app.post("/api/reset-password", async (req, res) => {
   const { email, newPassword } = req.body;
 
@@ -457,6 +453,7 @@ app.post("/api/reset-password", async (req, res) => {
   }
 });
 
+// User information endpoint
 app.get("/api/user/:userId", async (req, res) => {
   const userId = req.params.userId;
 
@@ -474,6 +471,7 @@ app.get("/api/user/:userId", async (req, res) => {
   }
 });
 
+// Update user categories endpoint
 app.post("/api/user/updateCategories/:userId", async (req, res) => {
   const userId = req.params.userId;
   const { category } = req.body;
@@ -510,6 +508,7 @@ app.post("/api/user/updateCategories/:userId", async (req, res) => {
   }
 });
 
+// Create new attempt object
 function createNewAttempt() {
   return {
     score: {
@@ -565,6 +564,7 @@ function createNewAttempt() {
   };
 }
 
+// Update category score, time, and statistics
 app.post("/api/user/updateCategoryScoreAndTime/:userId", async (req, res) => {
   const userId = req.params.userId;
   const { category, score, time, questionAttempts } = req.body;
@@ -659,6 +659,7 @@ app.post("/api/user/updateCategoryScoreAndTime/:userId", async (req, res) => {
   }
 });
 
+// Calculate win rate for a specific category
 app.get("/api/user/:userId/winrate", async (req, res) => {
   const userId = req.params.userId;
   const category = req.query.category;
@@ -705,6 +706,7 @@ app.get("/api/user/:userId/winrate", async (req, res) => {
   }
 });
 
+// Get category attempt details for a user
 app.get("/api/user/:userId/categoryAttempt", async (req, res) => {
   const userId = req.params.userId;
   const category = req.query.category;
@@ -734,6 +736,7 @@ app.get("/api/user/:userId/categoryAttempt", async (req, res) => {
   }
 });
 
+// Get all users (Admin)
 app.get("/api/admin/users", async (req, res) => {
   try {
     const users = await User.find({});
@@ -745,16 +748,13 @@ app.get("/api/admin/users", async (req, res) => {
   }
 });
 
-// Define a new route to handle fetching all user status data
+// Get all user status (Admin)
 app.get("/api/admin/user-status", async (req, res) => {
   try {
-    // Query the userStatus collection to retrieve all documents
     const userStatusData = await connection.db.collection("userStatus").find({}).toArray();
 
-    // Log the retrieved data
     console.log(userStatusData);
 
-    // Send the retrieved data as the response
     res.json(userStatusData);
   } catch (error) {
     console.error("Error fetching all user status data:", error);
@@ -762,7 +762,30 @@ app.get("/api/admin/user-status", async (req, res) => {
   }
 });
 
+// Update user data by id (Admin)
+app.put("/api/admin/users/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  const userData = req.body;
+  try {
+    const updatedUser = await User.findByIdAndUpdate(userId, userData, { new: true });
+    res.json(updatedUser);
+  } catch (error) {
+    console.error("Error updating user data:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
+// Delete user by id (Admin)
+app.delete("/api/admin/users/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    await User.findByIdAndDelete(userId);
+    res.status(204).send();
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

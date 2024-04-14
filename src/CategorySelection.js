@@ -5,11 +5,13 @@ import { IoStatsChart } from "react-icons/io5";
 import axios from "axios";
 import BackModal from "./Modal/BackModal";
 import sycuresLogo from "./Photos/gamePictureLogo.png";
+import LoadingSpinnerLogin from "./Modal/LoadingLoginModal";
 
 function CategorySelection() {
   const { userId } = useParams();
   const navigate = useNavigate();
   const [showBackModal, setShowBackModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const categories = [
     "Basic Computer and Mobile Skill",
@@ -20,6 +22,7 @@ function CategorySelection() {
 
   const handleCategoryClick = async (category) => {
     try {
+      setIsLoading(true);
       await axios.post(
         `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
         {
@@ -32,6 +35,8 @@ function CategorySelection() {
       navigate(`/${categoryPath}/${userId}`, {});
     } catch (error) {
       console.error("Error updating user categories:", error);
+    }  finally {
+      setIsLoading(false);
     }
   };
 
@@ -72,12 +77,20 @@ function CategorySelection() {
             <div className="rowCategorySelection">
               {categories.slice(0, 2).map((category) => (
                 <button
-                  key={category}
-                  className="buttonCategorySelection"
-                  onClick={() => handleCategoryClick(category)}
-                >
-                  {category}
-                </button>
+                key={category}
+                className="buttonCategorySelection"
+                onClick={() => handleCategoryClick(category)}
+              >
+                {isLoading ? (
+                  <>
+                  <div>
+                  <LoadingSpinnerLogin/>{category}
+                  </div>
+                  </>
+                ) : (
+                  category
+                )}
+              </button>
               ))}
             </div>
             <div className="rowCategorySelection">
@@ -87,7 +100,13 @@ function CategorySelection() {
                   className="buttonCategorySelection"
                   onClick={() => handleCategoryClick(category)}
                 >
-                  {category}
+                  {isLoading ? (
+                  <div> 
+                    <LoadingSpinnerLogin/>{category}
+                  </div>
+                  ) : (
+                    category
+                  )}
                 </button>
               ))}
             </div>
