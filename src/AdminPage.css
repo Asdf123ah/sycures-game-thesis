@@ -3,15 +3,15 @@
 .containerAdmin {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     background-image: url('./Photos/containerGameBlueBG.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    align-items: start;
-    overflow-x: auto;
+    align-items: flex-start;
+    overflow-x: hidden;
     padding: 2%;
 }
 
@@ -36,7 +36,6 @@
     text-align: center;
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    /* Add border on the right side of each cell */
 }
 
 .th:hover {
@@ -69,6 +68,11 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    margin: 1%;
+}
+
+.pagination button{
+    margin: 1%;
 }
 
 .page-item {
