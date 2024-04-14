@@ -350,11 +350,7 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    background-color: #1F144B; 
-    color: white;
-    transform: scale(1.05);
-}
+
 
 .robot-login {
     position: absolute;
@@ -846,11 +842,6 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    background-color: #1F144B; 
-    color: white;
-    transform: scale(1.05);
-}
 
 .robot-login {
     position: absolute;
@@ -1340,11 +1331,7 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    background-color: #1F144B; 
-    color: white;
-    transform: scale(1.05);
-}
+
 
 .robot-login {
     position: absolute;
@@ -1833,11 +1820,7 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    background-color: #1F144B; 
-    color: white;
-    transform: scale(1.05);
-}
+
 
 .robot-login {
     position: absolute;
@@ -2328,9 +2311,7 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    transform: scale(1.05);
-}
+
 
 .robot-login {
     position: absolute;
@@ -2813,9 +2794,6 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    transform: scale(1.05);
-}
 
 .robot-login {
     position: absolute;
@@ -3297,9 +3275,6 @@
     position: absolute;
 }
 
-.start-button-style-login:hover {
-    /* transform: scale(1.05); */
-}
 
 .robot-login {
     position: absolute;
