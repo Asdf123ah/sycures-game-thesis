@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import SycuresLogoLogin from "./Photos/SycuresLogoLogin.png";
 import SyGIF from "./Photos/sy.gif";
+import LoadingLoginModal from "./Modal/LoadingLoginModal";
 
 function Login() {
   const navigate = useNavigate();
@@ -21,10 +22,14 @@ function Login() {
   const Login = ({ onRegisterClick }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (e) => {
       e.preventDefault();
+      setShowModalInvalid(false);
+      setIsLoading(true);
       try {
+        setIsLoading(true);
         const response = await axios.post(
           "https://sycures-api.onrender.com/api/user/login",
           {
@@ -45,6 +50,8 @@ function Login() {
         }
       } catch (error) {
         setShowModalInvalid(true);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -80,7 +87,7 @@ function Login() {
             />
           </div>
           <button className="start-button-style-login" type="submit">
-            Login
+          {isLoading ? ( <><LoadingLoginModal /> Login</> ) : ("Login")}
           </button>
         </form>
         <div className="forgot-password">
@@ -110,14 +117,17 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [course, setCourse] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (e) => {
       e.preventDefault();
+      setShowModalAlreadyUse(false);
       if (!name || !birthDate || !email || !password || !course) {
         setShowModalInvalid(true);
         return;
       }
       try {
+        setIsLoading(true);
         const age = calculateAge(birthDate);
         const response = await axios.post(
           "https://sycures-api.onrender.com/api/user/register",
@@ -141,6 +151,8 @@ function Login() {
         setActiveTab("login");
       } catch (error) {
         setShowModalAlreadyUse(true);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -224,7 +236,7 @@ function Login() {
               type="submit"
               onClick={handleSubmit}
             >
-              Register
+              {isLoading ? ( <><LoadingLoginModal /> Register</> ) : ("Register")}
             </button>
           </div>
         </form>
@@ -271,7 +283,12 @@ function Login() {
           </button>
         </div>
         <div>
-          <img className="robot-login" src={SyGIF} alt="sy.gif" loading="eager"/>
+          <img
+            className="robot-login"
+            src={SyGIF}
+            alt="sy.gif"
+            loading="eager"
+          />
         </div>
         <div className="black-box"></div>
         <div className="darkblue-box">
