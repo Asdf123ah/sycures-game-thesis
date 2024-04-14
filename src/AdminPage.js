@@ -172,7 +172,7 @@ const handleDelete = async (userId) => {
   return (
     <div className="containerAdmin">
       <button
-        className="backButtonForgotPassword"
+        className="backButtonAdmin"
         onClick={() => navigate("/login")}
       />
       

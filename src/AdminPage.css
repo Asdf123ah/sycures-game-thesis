@@ -1,5 +1,3 @@
-/* AdminPage.css */
-
 .containerAdmin {
     width: 100vw;
     height: 100vh;
@@ -11,9 +9,9 @@
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    overflow-x: auto;
     padding: 2%;
-    box-sizing: border-box; /* Include padding in width and height calculation */
+    box-sizing: border-box;
 }
 
 
@@ -21,9 +19,9 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     border-collapse: collapse;
-    width: calc(100% - 4%); /* Adjust width to account for padding */
+    width: calc(100% - 4%);
     max-width: 100%; 
-    font-size: 16px; /* Adjust the font size as needed */
+    font-size: 16px;
     overflow-x: scroll;
 
 }
@@ -31,7 +29,7 @@
 .th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #006b96;
     color: white;
     cursor: pointer;
@@ -55,6 +53,7 @@
 .table td, .table th {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
   }
 
 .table tr:nth-child(even){background-color: #f2f2f2;}
@@ -66,9 +65,9 @@
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
 }
-
-/* AdminPage.css */
 
 .pagination {
     display: flex;
@@ -79,27 +78,15 @@
 
 .pagination button{
     margin: 1%;
-}
-
-.page-item {
-    margin: 0 5px;
-}
-
-.page-link {
-    cursor: pointer;
-    text-decoration: none;
-    color: blue;
-}
-
-.page-link:hover {
-    color: red;
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .action{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .action button{
@@ -107,3 +94,23 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
+
+.backButtonAdmin {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 5vw;
+    height: 9vh;
+    background: url('./Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAdmin:hover {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
