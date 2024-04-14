@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AdminPage.css";
+import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [userStatus, setUserStatus] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -85,6 +87,10 @@ function AdminPage() {
 
   return (
     <div className="containerAdmin">
+      <button
+        className="backButtonForgotPassword"
+        onClick={() => navigate("/login")}
+      />
       <h1>User Management</h1>
       <input
         type="text"
@@ -120,7 +126,11 @@ function AdminPage() {
                 <td>{user.course}</td>
                 <td>{user.position}</td>
                 <td>{user.email}</td>
-                <td>{user.password.length > 10 ? user.password.slice(0, 15) + "..." : user.password}</td>
+                <td>
+                  {user.password.length > 10
+                    ? user.password.slice(0, 15) + "..."
+                    : user.password}
+                </td>
                 <td></td>
               </tr>
             ))}
@@ -161,8 +171,8 @@ function AdminPage() {
             <th>Category Skill 4</th>
             <th>Category Skill 4 Attempt</th>
             <th>Category Skill 4 Best Score</th>
-            <th>Category Skill 4 Best Time</th>
-\          </tr>
+            <th>Category Skill 4 Best Time</th>\{" "}
+          </tr>
         </thead>
         <tbody>
           {sortedUsers
