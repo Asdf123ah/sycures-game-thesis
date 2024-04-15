@@ -114,3 +114,16 @@
     filter: brightness(70%);
 }
 
+.buttonDelete {
+    background-color: #D62740;
+    color: #FFFFFF;
+    font-size: 2rem;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.buttonDelete:hover {
+    border: 1px solid #ffffff; /* Change border color to blue on hover */
+}
+
+
