@@ -122,10 +122,6 @@ function Login() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       setShowModalAlreadyUse(false);
-      if (!name || !birthDate || !email || !password || !course) {
-        setShowModalInvalid(true);
-        return;
-      }
       try {
         setIsLoading(true);
         const age = calculateAge(birthDate);
@@ -234,7 +230,6 @@ function Login() {
             <button
               className="start-button-style-login"
               type="submit"
-              onClick={handleSubmit}
             >
               {isLoading ? ( <><LoadingLoginModal /> Register</> ) : ("Register")}
             </button>
