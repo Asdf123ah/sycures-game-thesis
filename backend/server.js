@@ -367,7 +367,7 @@ app.get("/user-status/:userId", async (req, res) => {
 
     const userStatusData = await connection.db.collection("userStatus").findOne({ _id: objectId });
 
-    console.log(userStatusData);
+    // console.log(userStatusData);
 
     res.json(userStatusData);
   } catch (error) {
@@ -753,7 +753,7 @@ app.get("/api/admin/user-status", async (req, res) => {
   try {
     const userStatusData = await connection.db.collection("userStatus").find({}).toArray();
 
-    console.log(userStatusData);
+    // console.log(userStatusData);
 
     res.json(userStatusData);
   } catch (error) {
