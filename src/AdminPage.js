@@ -111,8 +111,8 @@ function AdminPage() {
   };
 
   // Pagination
-  const usersPerPage = 20;
-  const totalPages = Math.ceil(sortedUsers1.length / usersPerPage);
+  const usersPerPage = 15;
+  const totalPages = Math.ceil(sortedUserStatus.length / usersPerPage);
 
   // Next page
   const nextPage = () => {
@@ -168,6 +168,20 @@ const handleDelete = async (userId) => {
     console.error("Error deleting user:", error);
   }
 };
+
+  // Function to handle database deletion
+  const handleDeleteDatabase = () => {
+    if (window.confirm("Are you sure you want to delete the database?")) {
+      console.log("Deleting database...");
+    }
+  };
+
+  // Function to handle site deletion
+  const handleDeleteSite = () => {
+    if (window.confirm("Are you sure you want to delete this site?")) {
+      console.log("Deleting site...");
+    }
+  };
 
   return (
     <div className="containerAdmin">
@@ -423,6 +437,12 @@ const handleDelete = async (userId) => {
           Next
         </button>
       </div>
+
+      <h1>Delete sycures database</h1>
+      <button className="buttonDelete" onClick={handleDeleteDatabase}>Delete database</button>
+
+      <h1>Delete sycures site</h1>
+      <button className="buttonDelete" onClick={handleDeleteSite}>Delete this site</button>
     </div>
   );
 }
