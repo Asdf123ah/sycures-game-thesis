@@ -7,14 +7,14 @@ import { FaSort } from "react-icons/fa";
 function AdminPage() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
-  const [userStatus, setUserStatus] = useState([]);
+  // const [userStatus, setUserStatus] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy1, setSortBy1] = useState(null);
   const [sortDirection1, setSortDirection1] = useState("asc");
   const [sortBy2, setSortBy2] = useState(null);
   const [sortDirection2, setSortDirection2] = useState("asc");
-  const [sortBy3, setSortBy3] = useState(null);
-  const [sortDirection3, setSortDirection3] = useState("asc");
+  // const [sortBy3, setSortBy3] = useState(null);
+  // const [sortDirection3, setSortDirection3] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
   const [editModeRowId, setEditModeRowId] = useState(null);
 
@@ -31,18 +31,18 @@ function AdminPage() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
-        setUserStatus(response.data);
-      } catch (error) {
-        console.error("Error fetching users:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
+  //       setUserStatus(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching users:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   // Sort users in table 1
   const sortedUsers1 = users.slice().sort((a, b) => {
@@ -69,16 +69,16 @@ function AdminPage() {
   });
 
   // Sort users in table3
-  const sortedUserStatus = userStatus.slice().sort((a, b) => {
-    if (!sortBy3) return 0;
-    const aValue = a[sortBy3];
-    const bValue = b[sortBy3];
-    if (typeof aValue === "string") {
-      return aValue.localeCompare(bValue) * (sortDirection3 === "asc" ? 1 : -1);
-    } else {
-      return (aValue - bValue) * (sortDirection3 === "asc" ? 1 : -1);
-    }
-  }); 
+  // const sortedUserStatus = userStatus.slice().sort((a, b) => {
+  //   if (!sortBy3) return 0;
+  //   const aValue = a[sortBy3];
+  //   const bValue = b[sortBy3];
+  //   if (typeof aValue === "string") {
+  //     return aValue.localeCompare(bValue) * (sortDirection3 === "asc" ? 1 : -1);
+  //   } else {
+  //     return (aValue - bValue) * (sortDirection3 === "asc" ? 1 : -1);
+  //   }
+  // }); 
 
   // Handle sorting in table1
   const handleSort1 = (column) => {
@@ -101,18 +101,18 @@ function AdminPage() {
   };
 
   // Handle sorting in table 3
-  const handleSort3 = (column) => {
-    if (sortBy3 === column) {
-      setSortDirection3(sortDirection3 === "asc" ? "desc" : "asc");
-    } else {
-      setSortBy3(column);
-      setSortDirection3("asc");
-    }
-  };
+  // const handleSort3 = (column) => {
+  //   if (sortBy3 === column) {
+  //     setSortDirection3(sortDirection3 === "asc" ? "desc" : "asc");
+  //   } else {
+  //     setSortBy3(column);
+  //     setSortDirection3("asc");
+  //   }
+  // };
 
   // Pagination
   const usersPerPage = 15;
-  const totalPages = Math.ceil(sortedUserStatus.length / usersPerPage);
+  const totalPages = Math.ceil(sortedUsers1.length / usersPerPage);
 
   // Next page
   const nextPage = () => {
@@ -392,7 +392,8 @@ const handleDelete = async (userId) => {
           Next
         </button>
       </div>
-      <h1>User's Statistic</h1>
+
+      {/* <h1>User's Statistic</h1>
       <input
         type="text"
         placeholder="Search by name"
@@ -436,7 +437,7 @@ const handleDelete = async (userId) => {
         <button onClick={nextPage} disabled={currentPage === totalPages}>
           Next
         </button>
-      </div>
+      </div> */}
 
       <h1>Delete sycures database</h1>
       <button className="buttonDelete" onClick={handleDeleteDatabase}>Delete database</button>
