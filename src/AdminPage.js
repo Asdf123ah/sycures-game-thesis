@@ -7,15 +7,17 @@ import { FaSort } from "react-icons/fa";
 function AdminPage() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
-  // const [userStatus, setUserStatus] = useState([]);
+  const [userStatus, setUserStatus] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage1, setCurrentPage1] = useState(1);
+  const [currentPage2, setCurrentPage2] = useState(1);
+  const [currentPage3, setCurrentPage3] = useState(1);
   const [sortBy1, setSortBy1] = useState(null);
   const [sortDirection1, setSortDirection1] = useState("asc");
   const [sortBy2, setSortBy2] = useState(null);
   const [sortDirection2, setSortDirection2] = useState("asc");
-  // const [sortBy3, setSortBy3] = useState(null);
-  // const [sortDirection3, setSortDirection3] = useState("asc");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy3, setSortBy3] = useState(null);
+  const [sortDirection3, setSortDirection3] = useState("asc");
   const [editModeRowId, setEditModeRowId] = useState(null);
 
   useEffect(() => {
@@ -31,18 +33,18 @@ function AdminPage() {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
-  //       setUserStatus(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching users:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
+        setUserStatus(response.data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   // Sort users in table 1
   const sortedUsers1 = users.slice().sort((a, b) => {
@@ -56,7 +58,7 @@ function AdminPage() {
     }
   });
 
-  // Sort users in table2
+  // Sort users in table 2
   const sortedUsers2 = users.slice().sort((a, b) => {
     if (!sortBy2) return 0;
     const aValue = a[sortBy2];
@@ -68,19 +70,19 @@ function AdminPage() {
     }
   });
 
-  // Sort users in table3
-  // const sortedUserStatus = userStatus.slice().sort((a, b) => {
-  //   if (!sortBy3) return 0;
-  //   const aValue = a[sortBy3];
-  //   const bValue = b[sortBy3];
-  //   if (typeof aValue === "string") {
-  //     return aValue.localeCompare(bValue) * (sortDirection3 === "asc" ? 1 : -1);
-  //   } else {
-  //     return (aValue - bValue) * (sortDirection3 === "asc" ? 1 : -1);
-  //   }
-  // }); 
+  // Sort users in table 3
+  const sortedUserStatus = userStatus.slice().sort((a, b) => {
+    if (!sortBy3) return 0;
+    const aValue = a[sortBy3];
+    const bValue = b[sortBy3];
+    if (typeof aValue === "string") {
+      return aValue.localeCompare(bValue) * (sortDirection3 === "asc" ? 1 : -1);
+    } else {
+      return (aValue - bValue) * (sortDirection3 === "asc" ? 1 : -1);
+    }
+  });
 
-  // Handle sorting in table1
+  // Handle sorting in table 1
   const handleSort1 = (column) => {
     if (sortBy1 === column) {
       setSortDirection1(sortDirection1 === "asc" ? "desc" : "asc");
@@ -90,7 +92,7 @@ function AdminPage() {
     }
   };
 
-  // Handle sorting in table2
+  // Handle sorting in table 2
   const handleSort2 = (column) => {
     if (sortBy2 === column) {
       setSortDirection2(sortDirection2 === "asc" ? "desc" : "asc");
@@ -101,30 +103,69 @@ function AdminPage() {
   };
 
   // Handle sorting in table 3
-  // const handleSort3 = (column) => {
-  //   if (sortBy3 === column) {
-  //     setSortDirection3(sortDirection3 === "asc" ? "desc" : "asc");
-  //   } else {
-  //     setSortBy3(column);
-  //     setSortDirection3("asc");
-  //   }
-  // };
+  const handleSort3 = (column) => {
+    if (sortBy3 === column) {
+      setSortDirection3(sortDirection3 === "asc" ? "desc" : "asc");
+    } else {
+      setSortBy3(column);
+      setSortDirection3("asc");
+    }
+  };
+  
+  // Pagination for table 1
+  const usersPerPage1 = 15;
+  const totalPages1 = Math.ceil(sortedUsers1.length / usersPerPage1);
+  // const paginatedUsers1 = sortedUsers1.slice((currentPage1 - 1) * usersPerPage1, currentPage1 * usersPerPage1);
 
-  // Pagination
-  const usersPerPage = 15;
-  const totalPages = Math.ceil(sortedUsers1.length / usersPerPage);
+  // Pagination for table 2
+  const usersPerPage2 = 15;
+  const totalPages2 = Math.ceil(sortedUsers2.length / usersPerPage2);
+  const paginatedUsers2 = sortedUsers2.slice((currentPage2 - 1) * usersPerPage2, currentPage2 * usersPerPage2);
 
-  // Next page
-  const nextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+  // Pagination for table 3
+  const usersPerPage3 = 15;
+  const totalPages3 = Math.ceil(sortedUserStatus.length / usersPerPage3);
+  const paginatedUserStatus = sortedUserStatus.slice((currentPage3 - 1) * usersPerPage3, currentPage3 * usersPerPage3);
+
+  // Next page for table 1
+  const nextPage1 = () => {
+    if (currentPage1 < totalPages1) {
+      setCurrentPage1(currentPage1 + 1);
     }
   };
 
-  // Previous page
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+  // Previous page for table 1
+  const prevPage1 = () => {
+    if (currentPage1 > 1) {
+      setCurrentPage1(currentPage1 - 1);
+    }
+  };
+
+  // Next page for table 2
+  const nextPage2 = () => {
+    if (currentPage2 < totalPages2) {
+      setCurrentPage2(currentPage2 + 1);
+    }
+  };
+
+  // Previous page for table 2
+  const prevPage2 = () => {
+    if (currentPage2 > 1) {
+      setCurrentPage2(currentPage2 - 1);
+    }
+  };
+
+  // Next page for table 3
+  const nextPage3 = () => {
+    if (currentPage3 < totalPages3) {
+      setCurrentPage3(currentPage3 + 1);
+    }
+  };
+
+  // Previous page for table 3
+  const prevPage3 = () => {
+    if (currentPage3 > 1) {
+      setCurrentPage3(currentPage3 - 1);
     }
   };
 
@@ -223,7 +264,12 @@ const handleDelete = async (userId) => {
           </tr>
         </thead>
         <tbody>
-          {sortedUsers1.map((user) => (
+          {sortedUsers1
+            .filter((user) =>
+              user.name.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .slice((currentPage1 - 1) * usersPerPage1, currentPage1 * usersPerPage1)
+            .map((user) => (
             <tr key={user._id}>
               <td>{editModeRowId === user._id ? <input type="text" value={user.name} onChange={(e) => handleEditChange(e, user._id, 'name')} /> : user.name}</td>
               <td>{editModeRowId === user._id ? <input type="text" value={user.age} onChange={(e) => handleEditChange(e, user._id, 'age')} /> : user.age}</td>
@@ -251,10 +297,10 @@ const handleDelete = async (userId) => {
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>
+        <button onClick={prevPage1} disabled={currentPage1 === 1}>
           Previous
         </button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
+        <button onClick={nextPage1} disabled={currentPage1 === totalPages1}>
           Next
         </button>
       </div>
@@ -296,7 +342,7 @@ const handleDelete = async (userId) => {
             .filter((user) =>
               user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
-            .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
+            .slice((currentPage2 - 1) * usersPerPage2, currentPage2 * usersPerPage2)
             .map((user) => (
               <tr key={user._id}>
                 <td>{user.name}</td>
@@ -385,15 +431,16 @@ const handleDelete = async (userId) => {
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>
+        <button onClick={prevPage2} disabled={currentPage2 === 1}>
           Previous
         </button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
+        <button onClick={nextPage2} disabled={currentPage2 === totalPages2}>
           Next
         </button>
       </div>
 
-      {/* <h1>User's Statistic</h1>
+      
+      <h1>User's Statistic</h1>
       <input
         type="text"
         placeholder="Search by name"
@@ -411,6 +458,12 @@ const handleDelete = async (userId) => {
             <th>Average Score</th>
             <th>Average Time</th>
             <th>Is Wheel Spinning</th>
+            <th>Category 1</th>
+            <th>Category 1 Attempt</th>
+            <th>Category 1 Is Wheel Spinning</th>
+            <th>Category 1 Wrong Streak</th>
+            <th>Category 1 Criteria</th>
+
           </tr>
         </thead>
         <tbody>
@@ -418,7 +471,7 @@ const handleDelete = async (userId) => {
             .filter((user) =>
               user.name.toLowerCase().includes(searchTerm.toLowerCase())
             )
-            .slice((currentPage - 1) * usersPerPage, currentPage * usersPerPage)
+            .slice((currentPage3 - 1) * usersPerPage3, currentPage3 * usersPerPage3)
             .map((user) => (
               <tr key={user._id}>
                 <td>{user.name}</td>
@@ -426,18 +479,23 @@ const handleDelete = async (userId) => {
                 <td>{user.overallAverageScore}</td>
                 <td>{user.overallAverageTime}</td>
                 <td>{String(user.isWheelSpinning)}</td>
+                <td>{String(user.categories[0].categoryName)}</td>
+                <td>{user.categories[0].categoryAttempt}</td>
+                <td>{String(user.categories[0].isWheelSpinning)}</td>
+                <td>{user.categories[0].totalOccurrences}</td>
+                <td>{String(user.categories[0].overallCriteria)}</td>
               </tr>
             ))}
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>
+        <button onClick={prevPage3} disabled={currentPage3 === 1}>
           Previous
         </button>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
+        <button onClick={nextPage3} disabled={currentPage3 === totalPages3}>
           Next
         </button>
-      </div> */}
+      </div>
 
       <h1>Delete sycures database</h1>
       <button className="buttonDelete" onClick={handleDeleteDatabase}>Delete database</button>
