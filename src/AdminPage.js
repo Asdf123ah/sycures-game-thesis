@@ -115,17 +115,14 @@ function AdminPage() {
   // Pagination for table 1
   const usersPerPage1 = 15;
   const totalPages1 = Math.ceil(sortedUsers1.length / usersPerPage1);
-  // const paginatedUsers1 = sortedUsers1.slice((currentPage1 - 1) * usersPerPage1, currentPage1 * usersPerPage1);
 
   // Pagination for table 2
   const usersPerPage2 = 15;
   const totalPages2 = Math.ceil(sortedUsers2.length / usersPerPage2);
-  const paginatedUsers2 = sortedUsers2.slice((currentPage2 - 1) * usersPerPage2, currentPage2 * usersPerPage2);
 
   // Pagination for table 3
   const usersPerPage3 = 15;
   const totalPages3 = Math.ceil(sortedUserStatus.length / usersPerPage3);
-  const paginatedUserStatus = sortedUserStatus.slice((currentPage3 - 1) * usersPerPage3, currentPage3 * usersPerPage3);
 
   // Next page for table 1
   const nextPage1 = () => {
