@@ -119,6 +119,47 @@ async function createUserStatus() {
       },
       {
         $addFields: {
+          consecutiveWrongAnswers: {
+            $cond: {
+              if: { $isArray: "$categories.categoryAttemptDetail.questionAttempts" },
+              then: {
+                $reduce: {
+                  input: "$categories.categoryAttemptDetail.questionAttempts",
+                  initialValue: { consecutiveCount: 0, maxConsecutiveCount: 0 },
+                  in: {
+                    $cond: {
+                      if: { $eq: ["$$this.isCorrect", false] },
+                      then: {
+                        consecutiveCount: { $add: ["$$value.consecutiveCount", 1] },
+                        maxConsecutiveCount: {
+                          $max: [
+                            "$$value.maxConsecutiveCount",
+                            { $add: ["$$value.consecutiveCount", 1] },
+                          ],
+                        },
+                      },
+                      else: {
+                        consecutiveCount: 0,
+                        maxConsecutiveCount: "$$value.maxConsecutiveCount",
+                      },
+                    },
+                  },
+                },
+              },
+              else: 0,
+            },
+          },
+        },
+      },
+      {
+        $addFields: {
+          hasFiveConsecutiveWrong: {
+            $gte: ["$consecutiveWrongAnswers.maxConsecutiveCount", 5],
+          },
+        },
+      },
+      {
+        $addFields: {
           currCorrectAnswer: {
             $sum: [
               { $cond: [ "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1", 1, 0, ], },
@@ -164,6 +205,8 @@ async function createUserStatus() {
           prevAttemptsCorrect: { $push: "$currCorrectAnswer" },
           categoryAttempt: { $first: "$categories.categoryAttempt" },
           totalTimeSpent: { $first: "$totalTimeSpent" },
+          totalOccurrences: { $sum: { $cond: ["$hasFiveConsecutiveWrong", 1, 0] } },
+          overallCriteria: { $first: "$overallCriteria" }, // Add overallCriteria to the group
         },
       },
       {
@@ -219,7 +262,65 @@ async function createUserStatus() {
           averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
         },
       },
-
+      {
+        $addFields: {
+          overallCriteria: {
+            $switch: {
+              branches: [
+                {
+                  case: { $gt: ["$totalOccurrences", 0] }, // If totalOccurrences is greater than 0
+                  then: "Criteria 1",
+                },
+                {
+                  case: {
+                    $and: [
+                      { $eq: ["$categoryAttempt", 1] }, // Check if it's the first attempt
+                      { $gte: ["$currCorrectAnswer", 7] } // Current score is less than 7
+                    ]
+                  }, // Criteria 2
+                  then: "Criteria 2",
+                },
+                {
+                  case: {
+                    $and: [
+                      { $eq: ["$categoryAttempt", 1] }, // Check if it's the first attempt
+                      { $lt: ["$currCorrectAnswer", 7] } // Current score is greaer than 7
+                    ]
+                  }, // Criteria 3
+                  then: "Criteria 3",
+                },
+                {
+                  case: {
+                    $and: [
+                      { $gte: ["$categoryAttempt", 2] }, // Check if it's not the first attempt
+                      { $lt: ["$currCorrectAnswer", 7] }, // Check if the current correct answer is less than 7
+                      { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] } // Check if the current correct answer is less than or equal to the previous correct answer
+                    ]
+                  },
+                  then: "Criteria 4"
+                },                
+                {
+                  case: {
+                    $reduce: {
+                      input: "$prevAttemptsCorrect",
+                      initialValue: { prevCorrect: null, consecutiveCount: 0 },
+                      in: {
+                        $cond: {
+                          if: { $lte: ["$$value.prevCorrect", { $divide: ["$$this", 10] }] }, // Percentage of correct answers
+                          then: { prevCorrect: { $divide: ["$$this", 10] }, consecutiveCount: { $add: ["$$value.consecutiveCount", 1] } },
+                          else: { prevCorrect: { $divide: ["$$this", 10] }, consecutiveCount: 0 }
+                        }
+                      }
+                    }
+                  },
+                  then: "Criteria 5"// Criteria 5
+                }
+              ],
+              default: "Unknown", // If none of the criteria matches
+            },
+          },
+        },
+      },
       {
         $addFields: {
           averageScore: {
@@ -245,6 +346,8 @@ async function createUserStatus() {
               isWheelSpinning: "$isWheelSpinning",
               averageScore: "$averageScore",
               averageTime: "$averageTime",
+              totalOccurrences: { $sum: "$totalOccurrences" }, // Add this line to include total occurrences in the final aggregation
+              overallCriteria: "$overallCriteria", // Include overallCriteria in the categories array
             },
           },
         },
