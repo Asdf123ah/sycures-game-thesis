@@ -16,7 +16,7 @@ function Badges() {
 
   useEffect(() => {
     axios
-      .get(`https://sycures-api.onrender.com/user-status/${userId}`)
+      .get(`https://sycures-api-00e6e06e3ebc.herokuapp.com/user-status/${userId}`)
       .then((response) => setUserStatusData(response.data))
       .catch((error) => console.error("Error fetching user status:", error));
   }, [userId]);

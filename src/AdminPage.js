@@ -23,7 +23,7 @@ function AdminPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
+        const response = await axios.get("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/users");
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -36,7 +36,7 @@ function AdminPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://sycures-api.onrender.com/api/admin/user-status");
+        const response = await axios.get("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/user-status");
         setUserStatus(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -180,11 +180,11 @@ const handleEditChange = (e, userId, field) => {
 // Function to save edits
 const handleSave = async (userId, updatedUserData) => {
   try {
-    await axios.put(`https://sycures-api.onrender.com/api/admin/users/${userId}`, updatedUserData);
+    await axios.put(`https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/users/${userId}`, updatedUserData);
     
     setEditModeRowId(null);
     
-    const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
+    const response = await axios.get("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/users");
     setUsers(response.data);
   } catch (error) {
     console.error("Error saving user data:", error);
@@ -199,8 +199,8 @@ const handleCancelEdit = () => {
 // Function to handle delete action
 const handleDelete = async (userId) => {
   try {
-    await axios.delete(`https://sycures-api.onrender.com/api/admin/users/${userId}`);
-    const response = await axios.get("https://sycures-api.onrender.com/api/admin/users");
+    await axios.delete(`https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/users/${userId}`);
+    const response = await axios.get("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/admin/users");
     setUsers(response.data);
   } catch (error) {
     console.error("Error deleting user:", error);

@@ -57,7 +57,7 @@ function ResultPage() {
   const updateScoreTime = useCallback(async () => {
     try {
       await axios.post(
-        `https://sycures-api.onrender.com/api/user/updateCategoryScoreAndTime/${userId}`,
+        `https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/updateCategoryScoreAndTime/${userId}`,
         {
           category: category,
           score: {
@@ -270,7 +270,7 @@ function ResultPage() {
     setIsLoading(true);
     try {
       await axios.post(
-        `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
+        `https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/updateCategories/${userId}`,
         {
           category: category,
         }

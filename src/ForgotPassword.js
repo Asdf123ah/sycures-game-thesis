@@ -19,7 +19,7 @@ function ForgotPassword() {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "https://sycures-api.onrender.com/api/reset-password",
+        "https://sycures-api-00e6e06e3ebc.herokuapp.com/api/reset-password",
         { email, newPassword }
       );
       const { data } = response;
@@ -43,7 +43,7 @@ function ForgotPassword() {
     setShowModalPassChangeSuccess(false);
     try {
       setIsLoading(true);
-      await axios.post("https://sycures-api.onrender.com/api/reset-password", {
+      await axios.post("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/reset-password", {
         email,
         newPassword,
       });
