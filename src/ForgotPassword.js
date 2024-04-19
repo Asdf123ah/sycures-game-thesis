@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import "./ForgotPassword.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import LoadingModal from "./Modal/LoadingModal";
 
 function ForgotPassword() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [resetSuccess, setResetSuccess] = useState(false);
-  const [showModalPassChangeSuccess, setShowModalPassChangeSuccess] = useState(false);
+  const [showModalPassChangeSuccess, setShowModalPassChangeSuccess] =
+    useState(false);
   const [emailNotFound, setEmailNotFound] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmailNotFound(false);
+
     try {
-      setIsLoading(true);
       const response = await axios.post(
-        "https://sycures-api-00e6e06e3ebc.herokuapp.com/api/reset-password",
+        "https://sycures-api.onrender.com/api/reset-password",
         { email, newPassword }
       );
       const { data } = response;
@@ -33,17 +31,14 @@ function ForgotPassword() {
     } catch (error) {
       console.error("Error resetting password:", error);
       setEmailNotFound(true);
-    } finally {
-      setIsLoading(false);
     }
   };
 
   const handleNewPasswordSubmit = async (e) => {
     e.preventDefault();
-    setShowModalPassChangeSuccess(false);
+
     try {
-      setIsLoading(true);
-      await axios.post("https://sycures-api-00e6e06e3ebc.herokuapp.com/api/reset-password", {
+      await axios.post("https://sycures-api.onrender.com/api/reset-password", {
         email,
         newPassword,
       });
@@ -54,8 +49,6 @@ function ForgotPassword() {
       }, 1000);
     } catch (error) {
       console.error("Error setting new password:", error);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -85,9 +78,7 @@ function ForgotPassword() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <button type="submit">
-                  {isLoading ? ( <><LoadingModal /> Reset my password</> ) : ("Reset my password")}
-                </button>
+                <button type="submit">Reset my password</button>
               </form>
             </>
           ) : (
@@ -103,9 +94,7 @@ function ForgotPassword() {
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
                 />
-                <button type="submit">
-                  {isLoading ? ( <><LoadingModal /> Set my password</> ) : ("Set my password")}
-                </button>
+                <button type="submit">Set new password</button>
               </form>
             </>
           )}

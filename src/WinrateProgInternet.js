@@ -11,7 +11,7 @@ function WinrateProgBasic() {
     const fetchWinRate = async () => {
       try {
         const response = await axios.get(
-          `https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/${userId}/winrate?category=Internet Skill`
+          `https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Internet Skill`
         );
         const fetchedWinRate = response.data.winRate;
         setWinRate(fetchedWinRate);

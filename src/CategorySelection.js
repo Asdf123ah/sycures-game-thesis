@@ -24,7 +24,7 @@ function CategorySelection() {
     try {
       setIsLoading(true);
       await axios.post(
-        `https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/updateCategories/${userId}`,
+        `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
         {
           category: category,
         }

@@ -31,7 +31,7 @@ function Login() {
       try {
         setIsLoading(true);
         const response = await axios.post(
-          "https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/login",
+          "https://sycures-api.onrender.com/api/user/login",
           {
             email: email,
             password: password,
@@ -126,7 +126,7 @@ function Login() {
         setIsLoading(true);
         const age = calculateAge(birthDate);
         const response = await axios.post(
-          "https://sycures-api-00e6e06e3ebc.herokuapp.com/api/user/register",
+          "https://sycures-api.onrender.com/api/user/register",
           {
             name: name,
             age: age,
