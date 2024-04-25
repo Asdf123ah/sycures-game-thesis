@@ -360,59 +360,15 @@ async function createUserStatus() {
           overallAverageScore: { $round: ["$overallAverageScore", 2] },
           overallAverageTime: { $round: ["$overallAverageTime", 2] },
           isWheelSpinning: {
-            $cond: {
-              if: {
-                $switch: {
-                  branches: [
-                    {
-                      case: {
-                        $eq: [{ $size: "$categories" }, 4]
-                      },
-                      then: {
-                        $or: [
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 4] },
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 3] },
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 2] }
-                        ]
-                      }
-                    },
-                    {
-                      case: {
-                        $eq: [{ $size: "$categories" }, 3]
-                      },
-                      then: {
-                        $or: [
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 3] },
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 2] }
-                        ]
-                      }
-                    },
-                    {
-                      case: {
-                        $eq: [{ $size: "$categories" }, 2]
-                      },
-                      then: {
-                        $or: [
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 2] },
-                          { $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 1] }
-                        ]
-                      }
-                    },
-                    {
-                      case: {
-                        $eq: [{ $size: "$categories" }, 1]
-                      },
-                      then: {
-                        $eq: [{ $size: { $filter: { input: "$categories", cond: { $eq: ["$$this.isWheelSpinning", true] } } } }, 1]
-                      }
-                    }
-                  ],
-                  default: false
-                }
-              },
-              then: true,
-              else: false
-            }
+            $switch: {
+              branches: [
+                {
+                  case: { $lt: ["$overallAverageScore", 7] },
+                  then: true,
+                },
+              ],
+              default: false,
+            },
           },
           categories: {
             $switch: {
