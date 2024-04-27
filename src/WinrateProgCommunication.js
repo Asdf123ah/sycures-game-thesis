@@ -11,7 +11,7 @@ function WinrateProgCommunication() {
     const fetchWinRate = async () => {
       try {
         const response = await axios.get(
-          `https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Communication Skill`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}/winrate?category=Communication Skill`
         );
         const fetchedWinRate = response.data.winRate;
         setWinRate(fetchedWinRate);

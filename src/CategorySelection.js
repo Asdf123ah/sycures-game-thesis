@@ -24,7 +24,7 @@ function CategorySelection() {
     try {
       setIsLoading(true);
       await axios.post(
-        `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
+        `https://sycures-api-0wof.onrender.com/api/user/updateCategories/${userId}`,
         {
           category: category,
         }
