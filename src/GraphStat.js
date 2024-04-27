@@ -16,7 +16,7 @@ useEffect(() => {
     const fetchWinRates = async () => {
       try {
         // Pass the category as a query parameter
-        const basicComputerMobileSkillResponse = await axios.get(`https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Basic Computer and Mobile Skill`);
+        const basicComputerMobileSkillResponse = await axios.get(`https://sycures-api-0wof.onrender.com/api/user/${userId}/winrate?category=Basic Computer and Mobile Skill`);
 
         // Extract win rate from the response
         const winRateBasic = parseFloat(basicComputerMobileSkillResponse.data.winRate);
@@ -41,7 +41,7 @@ useEffect(() => {
     const fetchWinRates = async () => {
       try {
         // Pass the category as a query parameter
-        const internetSkillResponse = await axios.get(`https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Internet Skill`);
+        const internetSkillResponse = await axios.get(`https://sycures-api-0wof.onrender.com/api/user/${userId}/winrate?category=Internet Skill`);
 
         // Extract win rate from the response
         const winRateInternet = parseFloat(internetSkillResponse.data.winRate);
@@ -65,7 +65,7 @@ useEffect(() => {
     const fetchWinRates = async () => {
       try {
         // Pass the category as a query parameter
-        const communicationSkillResponse = await axios.get(`https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Communication Skill`);
+        const communicationSkillResponse = await axios.get(`https://sycures-api-0wof.onrender.com/api/user/${userId}/winrate?category=Communication Skill`);
 
         // Extract win rate from the response
         const winRateCommunication = parseFloat(communicationSkillResponse.data.winRate);
@@ -89,7 +89,7 @@ useEffect(() => {
     const fetchWinRates = async () => {
       try {
         // Pass the category as a query parameter
-        const informationLiteracySkillResponse = await axios.get(`https://sycures-api.onrender.com/api/user/${userId}/winrate?category=Information Literacy Skill`);
+        const informationLiteracySkillResponse = await axios.get(`https://sycures-api-0wof.onrender.com/api/user/${userId}/winrate?category=Information Literacy Skill`);
 
         // Extract win rate from the response
         const winRateInformation = parseFloat(informationLiteracySkillResponse.data.winRate);

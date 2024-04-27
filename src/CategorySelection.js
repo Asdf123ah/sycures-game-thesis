@@ -21,7 +21,7 @@ function CategorySelection() {
   const handleCategoryClick = async (category) => {
     try {
       await axios.post(
-        `https://sycures-api.onrender.com/api/user/updateCategories/${userId}`,
+        `https://sycures-api-0wof.onrender.com/api/user/updateCategories/${userId}`,
         {
           category: category,
         }

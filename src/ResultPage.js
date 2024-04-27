@@ -55,7 +55,7 @@ function ResultPage() {
   const updateScoreTime = useCallback(async () => {
     try {
       await axios.post(
-        `https://sycures-api.onrender.com/api/user/updateCategoryScoreAndTime/${userId}`,
+        `https://sycures-api-0wof.onrender.com/api/user/updateCategoryScoreAndTime/${userId}`,
         {
           category: category,
           score: {

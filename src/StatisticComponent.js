@@ -38,7 +38,7 @@ function StatisticComponent() {
     const fetchUserData = async () => {
       try {
         const response = await fetch(
-          `https://sycures-api.onrender.com/api/user/${userId}`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch user data");
@@ -57,16 +57,16 @@ function StatisticComponent() {
     const fetchCategoryAttempt = async () => {
       try {
         const response1 = await fetch(
-          `https://sycures-api.onrender.com/api/user/${userId}/categoryAttempt?category=Basic Computer and Mobile Skill`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}/categoryAttempt?category=Basic Computer and Mobile Skill`
         );
         const response2 = await fetch(
-          `https://sycures-api.onrender.com/api/user/${userId}/categoryAttempt?category=Internet Skill`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}/categoryAttempt?category=Internet Skill`
         );
         const response3 = await fetch(
-          `https://sycures-api.onrender.com/api/user/${userId}/categoryAttempt?category=Communication Skill`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}/categoryAttempt?category=Communication Skill`
         );
         const response4 = await fetch(
-          `https://sycures-api.onrender.com/api/user/${userId}/categoryAttempt?category=Information Literacy Skill`
+          `https://sycures-api-0wof.onrender.com/api/user/${userId}/categoryAttempt?category=Information Literacy Skill`
         );
         if (!response1.ok && !response2.ok && !response3.ok && !response4.ok) {
           throw new Error("Failed to fetch categoryAttempt data");
