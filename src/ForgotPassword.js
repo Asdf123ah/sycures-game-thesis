@@ -38,7 +38,7 @@ function ForgotPassword() {
     e.preventDefault();
 
     try {
-      await axios.post("https://sycures-api.onrender.com/api/reset-password", {
+      await axios.post("https://sycures-api-0wof.onrender.com/api/reset-password", {
         email,
         newPassword,
       });
