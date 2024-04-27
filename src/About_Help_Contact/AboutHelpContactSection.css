@@ -153,7 +153,7 @@
 }
 
 .text {
-    height: 60vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -322,7 +322,7 @@
 }
 
 .text {
-    height: 115%;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -491,7 +491,7 @@
 }
 
 .text {
-    height: 60vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -660,7 +660,7 @@
 }
 
 .text {
-    height: 60vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -829,7 +829,7 @@
 }
 
 .text {
-    height: 60vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -999,7 +999,7 @@
 }
 
 .text {
-    height: 63vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
@@ -1057,7 +1057,7 @@
 
 .whiteBoxBG {
     position: relative;
-    background-color: #1B7A8F;
+    background-color: rgba(27, 122, 143, 0.6); /* Hex color #1b7a8f with 60% opacity */
     width: 100vw;
     height: 55vh;
     margin-top: 17%;
@@ -1169,7 +1169,7 @@
 }
 
 .text {
-    height: 63vh;
+    height: auto;
     position: relative;
     text-align: center;
     display: flex;
