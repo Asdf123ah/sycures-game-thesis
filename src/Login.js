@@ -116,12 +116,21 @@ function Login() {
     const [birthDate, setBirthDate] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [course, setCourse] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [passwordMismatch, setPasswordMismatch] = useState(false);
 
     const handleSubmit = async (e) => {
       e.preventDefault();
       setShowModalAlreadyUse(false);
+
+      // Password validation: Check if passwords match
+      if (password !== confirmPassword) {
+          setPasswordMismatch(true);
+          return;
+      }
+
       try {
         setIsLoading(true);
         const age = calculateAge(birthDate);
@@ -227,6 +236,24 @@ function Login() {
                 required
               />
             </div>
+            <div>
+              <label htmlFor="confirmRegPassword" className="label-confirmRegPass">
+                Confirm Password:
+              </label>
+              <input
+                type="password"
+                id="confirmRegPassword"
+                value={confirmPassword}
+                placeholder={"Confirm password"}
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  setPasswordMismatch(false);
+                }}
+                className={`input-style-confirmRegPass ${passwordMismatch ? 'input-error' : ''}`}
+                required
+              />
+              {passwordMismatch && <p className="error-message">Confirm password does not match</p>}
+            </div>
             <button
               className="start-button-style-login"
               type="submit"
@@ -253,30 +280,27 @@ function Login() {
           onClick={() => navigate("/")}
           loading="eager"
         />
-      </div>
-      <div className="lower-box">
-        <div>
-          <button
+          <div
             className="button-about-login"
             onClick={() => handleButtonClick("/about")}
           >
             {" "}
-            ABOUT
-          </button>
-          <button
+            About
+          </div>
+          <div
             className="button-help-login"
             onClick={() => handleButtonClick("/help")}
           >
-            {" "}
-            HELP
-          </button>
-          <button
+            Help
+          </div>
+          <div
             className="button-contact-login"
             onClick={() => handleButtonClick("/contact")}
           >
-            CONTACT
-          </button>
-        </div>
+            Contact
+          </div>
+      </div>
+      <div className="lower-box">
         <div>
           <img
             className="robot-login"
@@ -285,6 +309,7 @@ function Login() {
             loading="eager"
           />
         </div>
+        <div className="separator"></div>
         <div className="black-box"></div>
         <div className="darkblue-box">
           <div className="login-register-container">

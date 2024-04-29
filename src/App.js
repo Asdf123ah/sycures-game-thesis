@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/practice/:userId" element={<Practice />} />
+        <Route path="/practice" element={<Practice />} />
         <Route path="/" element={<SplashScreen />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<AboutSection />} />

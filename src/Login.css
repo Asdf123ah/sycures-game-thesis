@@ -9,14 +9,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -33,22 +34,21 @@
 }
 
 .black-box {
-    background-color: #0D0A1A;
-    width: 45%;
+    background-color: #EDEDED;
+    width: 70%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 15%;
     top: 0;
     z-index: 2;
-    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
     width: 90%;
-    height: 80%;
+    height: 95%;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -57,14 +57,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 65vw;
-    top: 6%;
-    left: 50%;
+    width: 33vw;
+    top: 23%;
+    left: 18%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -72,95 +73,80 @@
 }
 
 .button-about-login {
-    top: 5%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 105%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 1rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 23%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 105%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 1rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 41%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 105%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 1rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 46%;
+    margin-top: 48%;
     margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
-    font-size: 1.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 55%;
+    font-size: 1.9rem;
+    padding: 5px;
+    width: 90%;
+    margin-top: 60%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -168,22 +154,24 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
-    font-size: 1.6rem;
+    width: 100%;
+    font-size: 1.7rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 85%;
+    margin-top: 86%;
     margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
-    font-size: 1.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 95%;
+    font-size: 1.9rem;
+    padding: 5px;
+    width: 90%;
+    margin-top: 97%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -191,20 +179,21 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 115%;
-    margin-left: 60%;
-    transform: translateX(-50%);
-    font-size: .9rem;
+    width: 100%;
+    margin-top: 120%;
+    margin-left: 45%;
+    font-size: 1.2rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
-    margin-top: 135%;
-    margin-left: 42%;
+    margin-top: 147%;
+    margin-left: 40%;
     transform: translateX(-50%);
     font-size: 1rem;
     font-family: "Inter", sans-serif;
@@ -221,8 +210,8 @@
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 24%; 
-    margin-left: 5%;
+    margin-top: 30%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -230,17 +219,17 @@
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 50%; 
-    margin-left: 5%;
+    margin-top: 55%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-course {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 75%; 
-    margin-left: 5%;
+    margin-top: 57%; 
+    margin-left: 56%;
     position: absolute;
 }
 
@@ -248,8 +237,8 @@
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 100%; 
-    margin-left: 5%;
+    margin-top: 81%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -257,16 +246,25 @@
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 125%; 
-    margin-left: 5%;
+    margin-top: 106%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 131%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
     font-size: 1.4rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 32%;
+    width: 90%;
+    margin-top: 39%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -274,41 +272,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
     font-size: 1.4rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 58%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 64%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
     font-size: 1.4rem; 
     padding: 8px;
-    width: 91%;
-    margin-top: 83%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 64%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
     font-size: 1.4rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 108%;
+    width: 90%;
+    margin-top: 90%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -316,13 +318,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
     font-size: 1.4rem; 
     padding: 8px;
-    width: 85%;
-    margin-top: 133%;
+    width: 90%;
+    margin-top: 115%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -330,17 +333,35 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 1.4rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 140%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 2rem;
-    padding: 6px;
-    width: 50%;
-    margin-top: 163%;
-    left: 25%;
+    font-size: 1.8rem;
+    padding: 3px;
+    width: 43%;
+    margin-top: 170%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
+    background-color: #D9D9D9; 
     color: #1F144B;
     border: none;
     border-radius: 50px;
@@ -351,17 +372,29 @@
 }
 
 
-
 .robot-login {
     position: absolute;
-    width: 35vw;
+    width: 100vw;
     height: auto;
-    top: 74%;
-    left: -82%;
-    z-index: 6;
-    display: none;
-
+    margin-top: 10%;
+    left: -35%;
+    z-index: 0;
+    transform: rotate(20deg);
+    display: none
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    display: none;
+    }
 
 .login-register-container {
     position: relative;
@@ -370,7 +403,7 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 15%;
+    margin-top: 14%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -379,11 +412,11 @@
 }
 
 .login-register-button {
-    width: 45%;
-    font-size: 1.5rem;
+    width: 40%;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -391,6 +424,7 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
 
 
@@ -403,7 +437,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -485,6 +519,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
+}
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-top: 158%;
 }
 }
 
@@ -499,14 +545,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -523,23 +570,22 @@
 }
 
 .black-box {
-    background-color: #0D0A1A;
-    width: 45%;
+    background-color: #EDEDED;
+    width: 55%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 20%;
     top: 0;
     z-index: 2;
-    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 75%;
-    height: 80%;
+    width: 80%;
+    height: 95%;
     position: absolute;
-    top: 45%;
-    left: 50%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -547,14 +593,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 43vw;
-    top: 6%;
-    left: 50%;
+    width: 28vw;
+    top: 18%;
+    left: 18%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -562,95 +609,80 @@
 }
 
 .button-about-login {
-    top: 5%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 94%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 23%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 41%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 94%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
     font-size: 2.2rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 36%;
-    margin-left: 6%;
+    margin-top: 34%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
     font-size: 2.2rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 46%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 43%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -658,22 +690,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
     font-size: 2.2rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 70%;
-    margin-left: 6%;
+    margin-top: 64%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
     font-size: 2.2rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 80%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 73%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -681,22 +714,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 96%;
-    margin-left: 67%;
-    transform: translateX(-50%);
-    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 88%;
+    margin-left: 55%;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
-    margin-top: 110%;
-    margin-left: 42%;
+    margin-top: 107%;
+    margin-left: 40%;
     transform: translateX(-50%);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -708,56 +742,64 @@
 }
 
 .label-name {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 17%; 
-    margin-left: 5%;
+    margin-top: 27%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 37%; 
-    margin-left: 5%;
+    margin-top: 46%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-course {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 57%; 
-    margin-left: 5%;
+    margin-top: 46%; 
+    margin-left: 54%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 78%; 
-    margin-left: 5%;
+    margin-top: 64%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 81%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 99%; 
-    margin-left: 5%;
+    margin-left: 4%;
     position: absolute;
 }
 
-
 .input-style-name {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 24%;
+    width: 90%;
+    margin-top: 34%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -765,42 +807,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 44%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 52%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
-
 .input-style-course {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 91%;
-    margin-top: 65%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 52%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 86%;
+    width: 90%;
+    margin-top: 70%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -808,13 +853,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 107%;
+    width: 90%;
+    margin-top: 87%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -822,17 +868,35 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 1.6rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 105%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 2.8rem;
-    padding: 6px;
-    width: 50%;
-    margin-top: 129%;
-    left: 25%;
+    font-size: 2.4rem;
+    padding: 3px;
+    width: 43%;
+    margin-top: 126%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
+    background-color: #D9D9D9; 
     color: #1F144B;
     border: none;
     border-radius: 50px;
@@ -845,14 +909,27 @@
 
 .robot-login {
     position: absolute;
-    width: 35vw;
+    width: 100vw;
     height: auto;
-    top: 74%;
-    left: -82%;
-    z-index: 6;
-    display: none;
-
+    margin-top: 10%;
+    left: -35%;
+    z-index: 0;
+    transform: rotate(20deg);
+    display: none
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    display: none;
+    }
 
 .login-register-container {
     position: relative;
@@ -861,8 +938,8 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 10%;
-    left: 50%;
+    margin-top: 11%;
+    left: 59%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -870,11 +947,11 @@
 }
 
 .login-register-button {
-    width: 45%;
-    font-size: 2.2rem;
+    width: 31%;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -882,6 +959,7 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
 
 
@@ -894,7 +972,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -976,6 +1054,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
+}
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-top: 117%;
 }
 }
     
@@ -990,14 +1080,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -1014,23 +1105,22 @@
 }
 
 .black-box {
-    background-color: #0D0A1A;
-    width: 45%;
+    background-color: #EDEDED;
+    width: 55%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 20%;
     top: 0;
     z-index: 2;
-    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 75%;
-    height: 80%;
+    width: 80%;
+    height: 95%;
     position: absolute;
-    top: 45%;
-    left: 50%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -1038,14 +1128,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 35vw;
-    top: 6%;
-    left: 50%;
+    width: 23vw;
+    top: 13%;
+    left: 18%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -1053,95 +1144,80 @@
 }
 
 .button-about-login {
-    top: 5%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 89%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 23%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 89%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 41%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 89%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.2rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
     font-size: 2.4rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 23%;
-    margin-left: 6%;
+    margin-top: 30%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
     font-size: 2.4rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 31%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 38%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -1149,22 +1225,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
     font-size: 2.4rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 52%;
-    margin-left: 6%;
+    margin-top: 57%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
     font-size: 2.4rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 60%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 65%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -1172,22 +1249,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 73%;
-    margin-left: 70%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 78%;
+    margin-left: 60%;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
-    margin-top: 87%;
-    margin-left: 42%;
+    margin-top: 92%;
+    margin-left: 40%;
     transform: translateX(-50%);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -1199,55 +1277,64 @@
 }
 
 .label-name {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 12%; 
-    margin-left: 5%;
+    margin-top: 18%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 29%; 
-    margin-left: 5%;
+    margin-top: 34%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-course {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 46%; 
-    margin-left: 5%;
+    margin-top: 34%; 
+    margin-left: 54%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 62%; 
-    margin-left: 5%;
+    margin-top: 50%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 78%; 
-    margin-left: 5%;
+    margin-top: 65%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 80%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 18%;
+    width: 90%;
+    margin-top: 23%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1255,41 +1342,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 35%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 39%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 91%;
-    margin-top: 52%;
-    margin-left: 50%;
+    width: 42%;
+    margin-top: 39%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 68%;
+    width: 90%;
+    margin-top: 55%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1297,12 +1388,28 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     padding: 8px;
-    width: 88%;
+    width: 90%;
+    margin-top: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 1.6rem; 
+    padding: 8px;
+    width: 90%;
     margin-top: 85%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -1311,17 +1418,20 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 2.8rem;
-    padding: 8px;
-    width: 50%;
-    margin-top: 107%;
-    left: 25%;
+    font-size: 2.6rem;
+    padding: 3px;
+    width: 43%;
+    margin-top: 104%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
+    background-color: #D9D9D9; 
     color: #1F144B;
     border: none;
     border-radius: 50px;
@@ -1332,17 +1442,29 @@
 }
 
 
-
 .robot-login {
     position: absolute;
-    width: 35vw;
+    width: 100vw;
     height: auto;
-    top: 74%;
-    left: -82%;
-    z-index: 6;
-    display: none;
-
+    margin-top: 10%;
+    left: -35%;
+    z-index: 0;
+    transform: rotate(20deg);
+    display: none
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    display: none;
+    }
 
 .login-register-container {
     position: relative;
@@ -1351,8 +1473,8 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 5%;
-    left: 50%;
+    margin-top: 8%;
+    left: 59%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -1360,11 +1482,11 @@
 }
 
 .login-register-button {
-    width: 45%;
-    font-size: 2.6rem;
+    width: 31%;
+    font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -1372,7 +1494,9 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
+
 
 .form-container{
     margin-top: 0%;
@@ -1383,7 +1507,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -1465,6 +1589,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
+}
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-top: 96%;
 }
 }
     
@@ -1479,14 +1615,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -1503,23 +1640,22 @@
 }
 
 .black-box {
-    background-color: #0D0A1A;
+    background-color: #EDEDED;
     width: 45%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 25%;
     top: 0;
     z-index: 2;
-    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 75%;
-    height: 82%;
+    width: 53%;
+    height: 95%;
     position: absolute;
-    top: 47%;
-    left: 50%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -1527,14 +1663,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 27vw;
-    top: 6%;
-    left: 50%;
+    width: 18vw;
+    top: 13%;
+    left: 14%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -1542,95 +1679,80 @@
 }
 
 .button-about-login {
-    top: 5%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 84%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.4rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 23%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 84%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.4rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 41%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
-    height: 100px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
+    top: 84%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.4rem;
+    width: auto;
+    height: 110px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: none;
-
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 19%;
-    margin-left: 6%;
+    margin-top: 33%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
-    font-size: 2.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 26%;
+    font-size: 2.4rem;
+    padding: 5px;
+    width: 90%;
+    margin-top: 41%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -1638,22 +1760,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 43%;
-    margin-left: 6%;
+    margin-top: 59%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
-    font-size: 2.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 50%;
+    font-size: 2.4rem;
+    padding: 5px;
+    width: 90%;
+    margin-top: 67%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -1661,22 +1784,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 62%;
-    margin-left: 76%;
-    transform: translateX(-50%);
-    font-size: 1.3rem;
+    width: 100%;
+    margin-top: 81%;
+    margin-left: 51%;
+    font-size: 1.7rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
-    margin-top: 69%;
-    margin-left: 42%;
+    margin-top: 100%;
+    margin-left: 40%;
     transform: translateX(-50%);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -1688,55 +1812,64 @@
 }
 
 .label-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 11%; 
-    margin-left: 5%;
+    margin-top: 18%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 24%; 
-    margin-left: 5%;
+    margin-top: 37%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-course {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 37%; 
-    margin-left: 5%;
+    margin-left: 54%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 50%; 
-    margin-left: 5%;
+    margin-top: 56%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 63%; 
-    margin-left: 5%;
+    margin-top: 74%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 93%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 16%;
+    width: 90%;
+    margin-top: 24%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1744,41 +1877,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 29%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 43%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     padding: 8px;
-    width: 90%;
-    margin-top: 42%;
-    margin-left: 50%;
+    width: 42%;
+    margin-top: 43%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 55%;
+    width: 90%;
+    margin-top: 62%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1786,13 +1923,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
     font-size: 2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 68%;
+    width: 90%;
+    margin-top: 80%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -1800,17 +1938,35 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 2.2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 99%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 3rem;
-    padding: 8px;
-    width: 50%;
-    margin-top: 81%;
-    left: 25%;
+    font-size: 2.8rem;
+    padding: 4px;
+    width: 43%;
+    margin-top: 119%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
+    background-color: #D9D9D9; 
     color: #1F144B;
     border: none;
     border-radius: 50px;
@@ -1821,17 +1977,29 @@
 }
 
 
-
 .robot-login {
     position: absolute;
-    width: 35vw;
+    width: 100vw;
     height: auto;
-    top: 74%;
-    left: -82%;
-    z-index: 6;
-    display: none;
-
+    margin-top: 10%;
+    left: -35%;
+    z-index: 0;
+    transform: rotate(20deg);
+    display: none
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    display: none;
+    }
 
 .login-register-container {
     position: relative;
@@ -1840,8 +2008,8 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 5%;
-    left: 50%;
+    margin-top: 8%;
+    left: 59%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -1849,11 +2017,11 @@
 }
 
 .login-register-button {
-    width: 45%;
-    font-size: 2.6rem;
+    width: 31%;
+    font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -1861,7 +2029,9 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
+
 
 .form-container{
     margin-top: 0%;
@@ -1872,7 +2042,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -1954,6 +2124,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
+}
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1.4rem;
+    margin-left: 5%;
+    margin-top: 112%;
 }
 }
     
@@ -1968,14 +2150,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -1996,20 +2179,18 @@
     width: 45%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 7%;
     top: 0;
     z-index: 2;
-    display: block;
-
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 51%;
-    height: 84%;
+    width: 53%;
+    height: 95%;
     position: absolute;
-    top: 42%;
-    left: 73%;
+    top: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -2017,14 +2198,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 21vw;
-    top: 5%;
-    left: 50%;
+    width: 15vw;
+    top: 11%;
+    left: 19%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -2032,95 +2214,80 @@
 }
 
 .button-about-login {
-    top: 3%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 81%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.6rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: block;
-
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 22%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 81%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.6rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: block;
-
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 42%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 81%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.6rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
-    display: block;
-
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
     font-size: 2.6rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 22%;
-    margin-left: 6%;
+    margin-top: 21%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
     font-size: 2.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 30%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 28%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -2128,22 +2295,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
     font-size: 2.6rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 47%;
-    margin-left: 6%;
+    margin-top: 43%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
     font-size: 2.6rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 55%;
+    padding: 5px;
+    width: 90%;
+    margin-top: 50%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -2151,22 +2319,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 68%;
-    margin-left: 72%;
-    transform: translateX(-50%);
-    font-size: 1.3rem;
+    width: 100%;
+    margin-top: 61%;
+    margin-left: 60%;
+    font-size: 1.7rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
     margin-top: 77%;
-    margin-left: 42%;
+    margin-left: 43%;
     transform: translateX(-50%);
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -2178,54 +2347,63 @@
 }
 
 .label-name {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 12%; 
-    margin-left: 5%;
+    margin-top: 13%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-age {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 28%; 
-    margin-left: 5%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-course {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 44%; 
-    margin-left: 5%;
+    margin-top: 28%; 
+    margin-left: 54%;
     position: absolute;
 }
 
 .label-regEmail {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 60%; 
-    margin-left: 5%;
+    margin-top: 43%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .label-regPass {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 76%; 
-    margin-left: 5%;
+    margin-top: 58%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 73%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 88%;
+    width: 90%;
     margin-top: 18%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -2234,41 +2412,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 88%;
+    width: 40%;
     margin-top: 34%;
-    margin-left: 50%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 90%;
-    margin-top: 50%;
-    margin-left: 50%;
+    width: 42%;
+    margin-top: 34%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 66%;
+    width: 90%;
+    margin-top: 49%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2276,13 +2458,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 82%;
+    width: 90%;
+    margin-top: 64%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2290,19 +2473,36 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 2.2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 79%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 3.5rem;
-    padding: 8px;
-    width: 50%;
-    margin-top: 98%;
-    left: 25%;
+    font-size: 3rem;
+    padding: 5px;
+    width: 43%;
+    margin-top: 94%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
-    background-color: #1F144B; 
-    color: #FFFFFF;
+    background-color: #D9D9D9; 
+    color: #1F144B;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -2312,16 +2512,29 @@
 }
 
 
-
 .robot-login {
     position: absolute;
-    width: 75dvw;
+    width: 100vw;
     height: auto;
-    margin-top: -18%;
-    left: -13%;
-    z-index: 6;
+    margin-top: 10%;
+    left: -35%;
+    z-index: 0;
+    transform: rotate(20deg);
     display: block;
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    display: block;
+    }
 
 .login-register-container {
     position: relative;
@@ -2331,7 +2544,7 @@
 .buttons-container {            
     position: absolute;
     margin-top: 5%;
-    left: 50%;
+    left: 59%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -2339,11 +2552,11 @@
 }
 
 .login-register-button {
-    width: 45%;
+    width: 31%;
     font-size: 2.6rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -2351,6 +2564,7 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
 
 
@@ -2363,7 +2577,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -2445,6 +2659,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
+}
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1.6rem;
+    margin-left: 5%;
+    margin-top: 89%;
 }
 }
     
@@ -2459,14 +2685,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -2487,18 +2714,18 @@
     width: 45%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 7%;
     top: 0;
     z-index: 2;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 51%;
-    height: 83%;
+    width: 53%;
+    height: 95%;
     position: absolute;
-    top: 41%;
-    left: 73%;
+    top: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -2506,14 +2733,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 18vw;
-    top: 5%;
-    left: 50%;
+    width: 13vw;
+    top: 8%;
+    left: 19%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -2521,89 +2749,80 @@
 }
 
 .button-about-login {
-    top: 6%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 78%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.8rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 24%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 78%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.8rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 42%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
-    font-size: 3rem;
-    width: 49%;
+    top: 78%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 2.8rem;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
     font-size: 2.8rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 18%;
-    margin-left: 6%;
+    margin-top: 17%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
 
 .input-style-email {
     font-size: 2.8rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 25%;
+    padding: 6px;
+    width: 90%;
+    margin-top: 23%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -2611,22 +2830,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
     font-size: 2.8rem;
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    margin-top: 38%;
-    margin-left: 6%;
+    margin-top: 37%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
     font-size: 2.8rem;
-    padding: 8px;
-    width: 85%;
-    margin-top: 45%;
+    padding: 6px;
+    width: 90%;
+    margin-top: 43%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: "Inter", sans-serif;
@@ -2634,22 +2854,23 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
-    margin-top: 56%;
-    margin-left: 73%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 53%;
+    margin-left: 63%;
+    font-size: 1.9rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
 
 .p-login {
     margin-top: 64%;
-    margin-left: 45%;
+    margin-left: 43%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -2664,8 +2885,8 @@
     font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 11%; 
-    margin-left: 5%;
+    margin-top: 10%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -2673,8 +2894,8 @@
     font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 24%; 
-    margin-left: 5%;
+    margin-top: 23%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -2682,8 +2903,8 @@
     font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 37%; 
-    margin-left: 5%;
+    margin-top: 23%; 
+    margin-left: 54%;
     position: absolute;
 }
 
@@ -2691,8 +2912,8 @@
     font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 50%; 
-    margin-left: 5%;
+    margin-top: 35%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -2700,16 +2921,25 @@
     font-size: 2.2rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 63%; 
-    margin-left: 5%;
+    margin-top: 47%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 2.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-top: 59%; 
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
     font-size: 2.2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 16%;
+    width: 90%;
+    margin-top: 15%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2717,41 +2947,45 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
     font-size: 2.2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 29%;
-    margin-left: 50%;
+    width: 40%;
+    margin-top: 27%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
     font-size: 2.2rem; 
     padding: 8px;
-    width: 90%;
-    margin-top: 42%;
-    margin-left: 50%;
+    width: 42%;
+    margin-top: 27%;
+    margin-left: 75%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+
 }
 
 .input-style-regEmail {
     font-size: 2.2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 55%;
+    width: 90%;
+    margin-top: 39%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2759,13 +2993,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-regPass {
     font-size: 2.2rem; 
     padding: 8px;
-    width: 88%;
-    margin-top: 68%;
+    width: 90%;
+    margin-top: 51%;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
@@ -2773,19 +3008,36 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
+}
+
+.input-style-confirmRegPass {
+    font-size: 2.2rem; 
+    padding: 8px;
+    width: 90%;
+    margin-top: 63%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
-    font-size: 3.5rem;
-    padding: 10px;
-    width: 50%;
-    margin-top: 81%;
-    left: 25%;
+    font-size: 3.3rem;
+    padding: 6px;
+    width: 43%;
+    margin-top: 77%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
-    background-color: #1F144B; 
-    color: #FFFFFF;
+    background-color: #D9D9D9; 
+    color: #1F144B;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -2797,12 +3049,25 @@
 
 .robot-login {
     position: absolute;
-    width: 62dvw;
+    width: 100vw;
     height: auto;
-    margin-top: -15%;
-    left: -7%;
+    margin-top: 0%;
+    left: -35%;
     z-index: 0;
+    transform: rotate(20deg);
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    }
 
 .login-register-container {
     position: relative;
@@ -2811,8 +3076,8 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 5%;
-    left: 50%;
+    margin-top: 3%;
+    left: 57%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -2820,11 +3085,11 @@
 }
 
 .login-register-button {
-    width: 45%;
+    width: 33%;
     font-size: 2.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -2832,6 +3097,7 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
 
 
@@ -2844,7 +3110,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -2927,6 +3193,18 @@
     opacity: 0;
     transition: opacity .8s ease-out;
 }
+
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 1.8rem;
+    margin-left: 5%;
+    margin-top: 71%;
+}
 }
     
 /* Styles for screens(3xl) */
@@ -2940,14 +3218,15 @@
 }
 
 .upper-box {
-    flex: 15;
+    display: flex;
+    flex: 12;
     background-color: #D9D9D9;
     position: relative;
     overflow: hidden;
 }
 
 .lower-box {
-    flex: 85;
+    flex: 88;
     background-color: #84BCC8;
     position: relative;
     overflow: hidden;
@@ -2968,18 +3247,18 @@
     width: 45%;
     height: 100%;
     position: absolute;
-    right: 5%;
+    right: 7%;
     top: 0;
     z-index: 2;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 51%;
-    height: 80%;
+    width: 53%;
+    height: 95%;
     position: absolute;
-    top: 40%;
-    left: 73%;
+    top: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
@@ -2987,14 +3266,15 @@
     font-weight: bold;
     color: white;
     z-index: 6;
+    border-radius: 16px;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 16vw;
+    width: 13vw;
     top: 5%;
-    left: 50%;
+    left: 19%;
     transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
@@ -3002,72 +3282,63 @@
 }
 
 .button-about-login {
-    top: 6%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
+    top: 75%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+    position: relative;
     font-size: 3rem;
-    width: 49%;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-about-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-help-login {
-    top: 24%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    position: relative;
     font-size: 3rem;
-    width: 49%;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-help-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .button-contact-login {
-    top: 42%;
-    left: -1%;
-    position: absolute;
-    padding: 12px 28px;
+    top: 75%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    position: relative;
     font-size: 3rem;
-    width: 49%;
+    width: auto;
     height: 110px;
-    border: 6px solid #1F144B;
-    border-radius: 10px;
     color: #1F144B;
     cursor: pointer;
-    font-family: 'Jockey One';
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
 }
 
 .button-contact-login:hover{
-    background-color: rgba(31, 20, 75, 0.6);
+    text-decoration: underline;
 }
 
 .label-email {
@@ -3075,7 +3346,7 @@
     font-family: "Inter", sans-serif;
     font-weight: bold;
     margin-top: 15%;
-    margin-left: 9%;
+    margin-left: 4%;
     width: auto;
     position: absolute;
 }
@@ -3083,7 +3354,7 @@
 .input-style-email {
     font-size: 3rem;
     padding: 8px;
-    width: 80%;
+    width: 90%;
     margin-top: 21%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3092,6 +3363,7 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .label-password {
@@ -3099,14 +3371,14 @@
     font-family: "Inter", sans-serif;
     font-weight: bold;
     margin-top: 34%;
-    margin-left: 9%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-password {
     font-size: 3rem;
     padding: 8px;
-    width: 80%;
+    width: 90%;
     margin-top: 40%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3115,13 +3387,14 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .forgot-password {
+    width: 100%;
     margin-top: 50%;
-    margin-left: 75%;
-    transform: translateX(-50%);
-    font-size: 1.7rem;
+    margin-left: 69%;
+    font-size: 1.9rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -3130,7 +3403,7 @@
     margin-top: 58%;
     margin-left: 45%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Inter", sans-serif;
     position: absolute;
 }
@@ -3146,7 +3419,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 10%; 
-    margin-left: 9%;
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -3155,7 +3428,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 21%; 
-    margin-left: 9%;
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -3163,8 +3436,8 @@
     font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 32%; 
-    margin-left: 9%;
+    margin-top: 21%; 
+    margin-left: 54%;
     position: absolute;
 }
 
@@ -3172,8 +3445,8 @@
     font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    margin-top: 43%; 
-    margin-left: 9%;
+    margin-top: 32%; 
+    margin-left: 4%;
     position: absolute;
 }
 
@@ -3181,15 +3454,24 @@
     font-size: 2.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
+    margin-top: 43%; 
+    margin-left: 4%;
+    position: absolute;
+}
+
+.label-confirmRegPass {
+    font-size: 2.4rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     margin-top: 54%; 
-    margin-left: 9%;
+    margin-left: 4%;
     position: absolute;
 }
 
 .input-style-name {
     font-size: 2.4rem; 
     padding: 8px;
-    width: 80%;
+    width: 90%;
     margin-top: 14%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3198,26 +3480,44 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-age {
     font-size: 2.4rem; 
     padding: 8px;
-    width: 80%;
+    width: 40%;
     margin-top: 25%;
-    margin-left: 50%;
+    margin-left: 25%;
     transform: translateX(-50%);
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .input-style-course {
     font-size: 2.4rem; 
     padding: 8px;
-    width: 82%;
+    width: 42%;
+    margin-top: 25%;
+    margin-left: 75%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+    position: absolute;
+    border-radius: 16px;
+
+}
+
+.input-style-regEmail {
+    font-size: 2.4rem; 
+    padding: 8px;
+    width: 90%;
     margin-top: 36%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3226,12 +3526,13 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
-.input-style-regEmail {
+.input-style-regPass {
     font-size: 2.4rem; 
     padding: 8px;
-    width: 80%;
+    width: 90%;
     margin-top: 47%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3240,12 +3541,13 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
-.input-style-regPass {
+.input-style-confirmRegPass {
     font-size: 2.4rem; 
     padding: 8px;
-    width: 80%;
+    width: 90%;
     margin-top: 58%;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -3254,19 +3556,21 @@
     color: #000000;
     background-color: #B6B6B6;
     position: absolute;
+    border-radius: 16px;
 }
 
 .start-button-style-login {
     font-size: 3.5rem;
-    padding: 10px;
-    width: 50%;
-    margin-top: 71%;
-    left: 25%;
+    padding: 8px;
+    width: 45%;
+    margin-top: 69%;
+    left: 50%;
+    transform: translatex(-50%);
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-weight: bold;
-    background-color: #1F144B; 
-    color: #FFFFFF;
+    background-color: #D9D9D9; 
+    color: #1F144B;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -3278,12 +3582,25 @@
 
 .robot-login {
     position: absolute;
-    width: 62dvw;
+    width: 100vw;
     height: auto;
-    margin-top: -15%;
-    left: -7%;
+    margin-top: -5%;
+    left: -35%;
     z-index: 0;
+    transform: rotate(20deg);
 }
+
+.separator {
+    position: absolute;
+    width: 4px; 
+    height: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    left: 39%;
+    transform: translate(-50%);
+    top: 0; 
+    z-index: 2;
+    }
 
 .login-register-container {
     position: relative;
@@ -3292,8 +3609,8 @@
 
 .buttons-container {            
     position: absolute;
-    margin-top: 5%;
-    left: 50%;
+    margin-top: 3%;
+    left: 55%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
@@ -3301,11 +3618,11 @@
 }
 
 .login-register-button {
-    width: 45%;
+    width: 35%;
     font-size: 3rem;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: #727272;
     color: #FFFFFF;
     padding: 0;
     margin: 5%;
@@ -3313,6 +3630,7 @@
     transition: filter .4s ease;
     position: relative;
     margin-bottom: 0%;
+    border-radius: 16px;
 }
 
 
@@ -3325,7 +3643,7 @@
 
 .active {
     transform: scale(1.05); 
-    background-color: #727272 ;
+    background-color: #D9D9D9 ;
     color: #FFFFFF;
 
 }
@@ -3408,8 +3726,20 @@
     opacity: 0;
     transition: opacity .8s ease-out;
 }
-}
 
+.input-error {
+    border-color: red;
+}
+    
+.error-message {
+    position: absolute;
+    color: red;
+    font-size: 2rem;
+    margin-left: 5%;
+    margin-top: 65%;
+}
+}
+    
 @keyframes fadeOut {
     from {
         opacity: 1;
