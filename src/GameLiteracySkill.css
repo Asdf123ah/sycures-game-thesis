@@ -25,6 +25,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -373,35 +374,34 @@
     width: 90vw;
     height: auto;
     padding: 0.5rem;
-    background-color: #1F144B;
+    background-color: #B1D4DC;
     justify-content: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
     }
     
 .popup h1{
     text-align: center;
     font-size: 2.2rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
 
 .popup p{
-
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -459,6 +459,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -806,35 +807,35 @@
     transform: translate(-50%, -50%);
     width: 90vw;
     height: auto;
-    padding: 0.5rem;
-    background-color: #1F144B;
+    padding: 1rem;
+    background-color: #B1D4DC;
     justify-content: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
     }
     
 .popup h1{
     text-align: center;
     font-size: 2.7rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
 
 .popup p{
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -892,6 +893,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -1240,34 +1242,34 @@
     width: 90vw;
     height: auto;
     padding: 1rem;
-    background-color: #1F144B;
+    background-color: #B1D4DC;
     justify-content: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
     }
     
 .popup h1{
     text-align: center;
     font-size: 3.2rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
 
 .popup p{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -1319,12 +1321,13 @@
     position: absolute;
     top: 9px;
     left: 1%;
-    width: 7vw;
+    width: 7.5vw;
     height: 8vh;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -1673,25 +1676,25 @@
     width: 75vw;
     height: auto;
     padding: 2rem;
-    background-color: #1F144B;
+    background-color: #B1D4DC;
     justify-content: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
     }
     
 .popup h1{
     text-align: center;
     font-size: 3.6rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
@@ -1700,7 +1703,7 @@
     text-align: center;
     font-size: 2.3rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -1752,12 +1755,13 @@
     position: absolute;
     top: 15px;
     left: 1%;
-    width: 6vw;
+    width: 7vw;
     height: 9vh;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -2106,25 +2110,25 @@
     width: 75vw;
     height: auto;
     padding: 2rem;
-    background-color: #1F144B;
+    background-color: #B1D4DC;
     justify-content: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
     }
     
 .popup h1{
     text-align: center;
     font-size: 4rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
@@ -2133,7 +2137,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -2185,12 +2189,13 @@
     position: absolute;
     top: 20px;
     left: 1%;
-    width: 5vw;
+    width: 5.5vw;
     height: 9vh;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -2537,19 +2542,19 @@
     transform: translate(-50%, -50%);
     width: 60vw;
     height: auto;
-    padding: 3%;
-    background-color: #1F144B;
+    padding: 4%;
+    background-color: #B1D4DC;
     justify-items: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 1.8rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
 }
 
 .popup h1{
@@ -2557,7 +2562,7 @@
     text-align: center;
     font-size: 4rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%;
 }
@@ -2567,7 +2572,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
@@ -2622,6 +2627,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     border: none;
+    border-radius: 16px;
     transition: transform .4s ease;  
 }
 
@@ -2695,7 +2701,7 @@
 }
 
 .hexagon0 {
-    top: 35px;
+    top: 30px;
     background-color: lightgray;
 }   
 .hexagon1 { 
@@ -2969,18 +2975,18 @@
     width: 60vw;
     height: auto;
     padding: 3%;
-    background-color: #1F144B;
+    background-color: #B1D4DC;
     justify-items: center;
     text-align: center;
     z-index: 1000;
     margin: 0;
     font-size: 2rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     animation: fadeIn 0.7s;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-
+    border-radius: 16px;
 }
 
 .popup h1{
@@ -2988,7 +2994,7 @@
     text-align: center;
     font-size: 4.5rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 10%; 
 }
@@ -2998,7 +3004,7 @@
     text-align: center;
     font-size: 3rem;
     font-family: 'Jockey One';
-    color: #FFFFFF;
+    color: #1F144B;
     margin-top: 0%;
     margin-bottom: 13%;
 }
