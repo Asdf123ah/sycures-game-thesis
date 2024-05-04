@@ -7,10 +7,12 @@ function ForgotPassword() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [resetSuccess, setResetSuccess] = useState(false);
   const [showModalPassChangeSuccess, setShowModalPassChangeSuccess] =
     useState(false);
   const [emailNotFound, setEmailNotFound] = useState(false);
+  const [passwordMismatch, setPasswordMismatch] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,11 +39,19 @@ function ForgotPassword() {
   const handleNewPasswordSubmit = async (e) => {
     e.preventDefault();
 
+    if (newPassword !== confirmPassword) {
+      setPasswordMismatch(true);
+      return;
+    }
+
     try {
-      await axios.post("https://sycures-api-0wof.onrender.com/api/reset-password", {
-        email,
-        newPassword,
-      });
+      await axios.post(
+        "https://sycures-api-0wof.onrender.com/api/reset-password",
+        {
+          email,
+          newPassword,
+        }
+      );
       setResetSuccess(false);
       setShowModalPassChangeSuccess(true);
       setTimeout(() => {
@@ -67,7 +77,7 @@ function ForgotPassword() {
           <h1>Forgot Password</h1>
           {!resetSuccess ? (
             <>
-              <p>
+              <p className="forgotPassText">
                 Please enter your email address below to reset your password.
               </p>
               <form onSubmit={handleSubmit}>
@@ -83,7 +93,7 @@ function ForgotPassword() {
             </>
           ) : (
             <>
-              <p>
+              <p className="forgotPassText">
                 To reset your password, kindly input your new password below.
               </p>
               <form onSubmit={handleNewPasswordSubmit}>
@@ -94,6 +104,22 @@ function ForgotPassword() {
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
                 />
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  placeholder="Confirm new password"
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                    setPasswordMismatch(false);
+                  }}
+                  className={`${passwordMismatch ? "input-error" : ""}`}
+                  required
+                />
+                {passwordMismatch && (
+                  <p className="error-message-forgotpass">
+                    Confirm password does not match
+                  </p>
+                )}
                 <button type="submit">Set new password</button>
               </form>
             </>
