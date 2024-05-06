@@ -1,5 +1,3 @@
-/* Styles for screens(xs) */
-@media screen and (max-width: 639px) {
 .dot {
   fill: #FFFFFF;
   transition: cx 1.5s ease, cy 1.5s ease;
@@ -10,7 +8,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
   height: auto;
 }
 
@@ -18,9 +15,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -58%);
-  width: 330px;
-  height: 330px;
   border-radius: 50%;
   background-color: #1f144b;
   display: flex;
@@ -75,28 +69,24 @@
 
 .textstyle1 {
   fill: #1F144B;
-  font-size: 1.5rem;
   font-weight: bold;
   overflow: visible;
 }
 
 .textstyle2 {
   fill: #1F144B;
-  font-size: 1.5rem;
   font-weight: bold;
   overflow: visible;
 }
 
 .textstyle3 {
   fill: #1F144B;
-  font-size: 1.5rem;
   font-weight: bold;
   overflow: visible;
 }
 
 .textstyle4 {
   fill: #1F144B;
-  font-size: 1.5rem;
   font-weight: bold;
   overflow: visible;
 }
@@ -121,8 +111,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 260px;
-  height: 260px;
   border: 2px solid white;
   border-radius: 50%;
   background-color: transparent;
@@ -138,8 +126,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
   border: 2px solid white;
   border-radius: 50%;
   background-color: transparent;
@@ -155,8 +141,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 125px;
-  height: 125px;
   border: 2px solid white;
   border-radius: 50%;
   background-color: transparent;
@@ -172,8 +156,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
   border: 2px solid white;
   border-radius: 50%;
   background-color: transparent;
@@ -183,1143 +165,347 @@
   color: #ffffff;
   overflow: visible;
 }
+
+/* Styles for screens(xs) */
+@media screen and (max-width: 639px) {
+  .div1 {
+    width: 60%;
+  }
+
+  .div2 {
+    transform: translate(-50%, -58%);
+    width: 330px;
+    height: 330px;
+  }
+
+  .textstyle1 {
+    font-size: 1.5rem;
+  }
+
+  .textstyle2 {
+    font-size: 1.5rem;
+  }
+
+  .textstyle3 {
+    font-size: 1.5rem;
+  }
+
+  .textstyle4 {
+    font-size: 1.5rem;
+  }
+
+  .div3 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .div4 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .div5 {
+    width: 125px;
+    height: 125px;
+  }
+
+  .div6 {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Styles for screens(sm) */
 @media screen and (min-width: 640px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
-}
+  .div1 {
+    width: 60%;
+  }
 
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-}
+  .div2 {
+    transform: translate(-50%, -61%);
+    width: 400px;
+    height: 400px;
+  }
 
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -61%);
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .textstyle1 {
+    font-size: 1.5rem;
+  }
 
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
+  .textstyle2 {
+    font-size: 1.5rem;
+  }
 
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle3 {
+    font-size: 1.5rem;
+  }
 
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle4 {
+    font-size: 1.5rem;
+  }
 
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
+  .div3 {
+    width: 310px;
+    height: 310px;
+  }
 
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
+  .div4 {
+    width: 230px;
+    height: 230px;
+  }
 
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
+  .div5 {
+    width: 140px;
+    height: 140px;
+  }
 
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 310px;
-  height: 310px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 230px;
-  height: 230px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 140px;
-  height: 140px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .div6 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Styles for screens(md) */
 @media screen and (min-width: 768px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
-}
+  .div1 {
+    width: 60%;
+  }
 
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-}
+  .div2 {
+    transform: translate(-50%, -61%);
+    width: 370px;
+    height: 370px;
+  }
 
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -61%);
-  width: 370px;
-  height: 370px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .textstyle1 {
+    font-size: 1.5rem;
+  }
 
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
+  .textstyle2 {
+    font-size: 1.5rem;
+  }
 
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle3 {
+    font-size: 1.5rem;
+  }
 
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle4 {
+    font-size: 1.5rem;
+  }
 
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
+  .div3 {
+    width: 310px;
+    height: 310px;
+  }
 
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
+  .div4 {
+    width: 230px;
+    height: 230px;
+  }
 
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
+  .div5 {
+    width: 140px;
+    height: 140px;
+  }
 
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 310px;
-  height: 310px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 230px;
-  height: 230px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 140px;
-  height: 140px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .div6 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Styles for screens(lg) */
 @media screen and (min-width: 1024px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
-}
+  .div1 {
+    width: 60%;
+  }
 
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-}
+  .div2 {
+    transform: translate(-50%, -61%);
+    width: 370px;
+    height: 370px;
+  }
 
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -61%);
-  width: 370px;
-  height: 370px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .textstyle1 {
+    font-size: 1.5rem;
+  }
 
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
+  .textstyle2 {
+    font-size: 1.5rem;
+    ;
+  }
 
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle3 {
+    font-size: 1.5rem;
+  }
 
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle4 {
+    font-size: 1.5rem;
+  }
 
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
+  .div3 {
+    width: 310px;
+    height: 310px;
+  }
 
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
+  .div4 {
+    width: 230px;
+    height: 230px;
+  }
 
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
+  .div5 {
+    width: 140px;
+    height: 140px;
+  }
 
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 310px;
-  height: 310px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 230px;
-  height: 230px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 140px;
-  height: 140px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .div6 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Styles for screens(xl) */
 @media screen and (min-width: 1280px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
-}
+  .div1 {
+    width: 60%;
+  }
 
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: auto;
-}
+  .div2 {
+    transform: translate(-50%, -61%);
+    width: 330px;
+    height: 330px;
+  }
 
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -61%);
-  width: 330px;
-  height: 330px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .textstyle1 {
+    font-size: 1.5rem;
+  }
 
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
+  .textstyle2 {
+    font-size: 1.5rem;
+  }
 
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle3 {
+    font-size: 1.5rem;
+  }
 
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle4 {
+    font-size: 1.5rem;
+  }
 
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
+  .div3 {
+    width: 260px;
+    height: 260px;
+  }
 
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
+  .div4 {
+    width: 190px;
+    height: 190px;
+  }
 
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
+  .div5 {
+    width: 120px;
+    height: 120px;
+  }
 
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 1.5rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 260px;
-  height: 260px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 190px;
-  height: 190px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
-  height: 120px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .div6 {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Styles for screens(2xl) */
 @media screen and (min-width: 1536px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
-}
+  .div1 {
+    width: 100%;
+  }
 
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
-}
+  .div2 {
+    transform: translate(-50%, -58%);
+    width: 410px;
+    height: 410px;
+  }
 
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -58%);
-  width: 410px;
-  height: 410px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .textstyle1 {
+    font-size: 2rem;
+  }
 
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
+  .textstyle2 {
+    font-size: 2rem;
+  }
 
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle3 {
+    font-size: 2rem;
+  }
 
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
+  .textstyle4 {
+    font-size: 2rem;
+  }
 
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
+  .div3 {
+    width: 320px;
+    height: 320px;
+  }
 
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
+  .div4 {
+    width: 240px;
+    height: 240px;
+  }
 
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
+  .div5 {
+    width: 150px;
+    height: 150px;
+  }
 
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
-  height: 320px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 240px;
-  height: 240px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
+  .div6 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Styles for screens(3xl) */
 @media screen and (min-width: 1800px) {
-.dot {
-  fill: #FFFFFF;
-  transition: cx 1.5s ease, cy 1.5s ease;
+  .div1 {
+    width: 100%;
+  }
+
+  .div2 {
+    transform: translate(-50%, -58%);
+    width: 440px;
+    height: 440px;
+  }
+
+  .textstyle1 {
+    font-size: 2rem;
+  }
+
+  .textstyle2 {
+    font-size: 2rem;
+  }
+
+  .textstyle3 {
+    font-size: 2rem;
+  }
+
+  .textstyle4 {
+    font-size: 2rem;
+  }
+
+  .div3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .div4 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .div5 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .div6 {
+    width: 60px;
+    height: 60px;
+  }
 }
-
-.div1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
-}
-
-.div2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -58%);
-  width: 440px;
-  height: 440px;
-  border-radius: 50%;
-  background-color: #1f144b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.svg1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: visible;
-}
-
-.linestyle1 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
-
-.linestyle2 {
-  stroke: #FFFFFF;
-  stroke-width: 2px;
-}
-
-.linestyle3 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: y1 1.5s ease, x2 1.5s ease;
-}
-
-.linestyle4 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.linestyle5 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x2 1.5s ease, y1 1.5s ease;
-}
-
-.linestyle6 {
-  stroke: #00AEC6;
-  stroke-width: 4px;
-  transition: x1 1.5s ease, y2 1.5s ease;
-}
-
-.textstyle1 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle2 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle3 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle4 {
-  fill: #1F144B;
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle5 {
-  fill: #FFFFFF;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-}
-
-.textstyle6 {
-  fill: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  overflow: visible;
-  transform: rotate(90deg);
-}
-
-.div3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 340px;
-  height: 340px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-
-.div6 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  overflow: visible;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-  
