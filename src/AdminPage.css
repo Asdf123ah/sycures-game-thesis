@@ -14,16 +14,14 @@
     box-sizing: border-box;
 }
 
-
 .table {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     border-collapse: collapse;
     width: calc(100% - 4%);
-    max-width: 100%; 
+    max-width: 100%;
     font-size: 16px;
     overflow-x: scroll;
-
 }
 
 .th {
@@ -50,15 +48,20 @@
     background-color: #f5f5f5;
 }
 
-.table td, .table th {
+.table td,
+.table th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-  }
+}
 
-.table tr:nth-child(even){background-color: #f2f2f2;}
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-.table tr:hover {background-color: #ddd;}
+.table tr:hover {
+    background-color: #ddd;
+}
 
 .input {
     width: 50vw;
@@ -76,20 +79,20 @@
     margin: 1%;
 }
 
-.pagination button{
+.pagination button {
     margin: 1%;
     padding: 10px 35px;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
 }
 
-.action{
+.action {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.action button{
+.action button {
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -126,5 +129,3 @@
 .buttonDelete:hover {
     border: 1px solid #ffffff
 }
-
-
